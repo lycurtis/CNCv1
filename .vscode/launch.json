@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [{
+    "name": "Debug (ST-LINK + OpenOCD)",
+    "type": "cortex-debug",
+    "request": "launch",
+    "servertype": "openocd",
+    "cwd": "${workspaceFolder}",
+    "executable": "${workspaceFolder}/build/CNCv1",
+    "device": "STM32F446RE",
+    "configFiles": ["interface/stlink.cfg","target/stm32f4x.cfg"],
+    "openOCDLaunchCommands": ["transport select swd","adapter speed 950"],
+    "runToMain": true,
+    "preLaunchTask": "Build (CMake/Ninja)"
+  }]
+}
