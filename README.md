@@ -49,6 +49,7 @@ Install these tools before building:
    - C/C++
 
 ## Project Structure 
+```
 Firmware/
 ├─ CMakeLists.txt
 ├─ cmake/
@@ -66,6 +67,7 @@ Firmware/
    ├─ settings.json
    ├─ tasks.json
    └─ launch.json
+```
 
 ## Toolchain File (cmake/toolchain-arm-none-eabi.cmake)
 ```
@@ -116,3 +118,20 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
   COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${PROJECT_NAME}> $<TARGET_FILE_DIR:${PROJECT_NAME}>/${PROJECT_NAME}.bin
 )
 ```
+## Typical Workflow
+1. Configure (only first time or after clean)
+```
+cmake -S . -B build -G Ninja -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-arm-none-eabi.cmake
+```
+2. Build
+```
+cmake --build build -j
+```
+3. Flash
+- VS Code: Ctrl+Shift+B --> Flash (OpenOCD, HEX)
+- CLI
+```
+openocd -f interface/stlink.cfg -f target/stm32f4x.cfg -c "transport select swd; adapter speed 950; init; reset halt; flash write_image erase build/CNCv1.hex; verify_image build/CNCv1.hex; reset run; exit"
+```
+4. Debug
+- Press F5 in VS Code
