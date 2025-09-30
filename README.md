@@ -119,14 +119,20 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
 )
 ```
 ## Typical Workflow
-1. Configure (only first time or after clean)
+1. First Configure ( Run once or when toolchain/build system changes):
 ```
-cmake -S . -B build -G Ninja -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-arm-none-eabi.cmake
+$tc = (Resolve-Path .\cmake\toolchain-arm-none-eabi.cmake).Path
+cmake -S . -B build -G Ninja "-DCMAKE_TOOLCHAIN_FILE=$tc"
 ```
-2. Build
+- -S . = source directory
+- -B build = put outputs in build/
+- -G Ninja = use Ninja generator
+- -D… = define variables (toolchain here)
+2. Normal Builds (Every time you edit a .c/.h file):
 ```
 cmake --build build -j
 ```
+- Ninja recompiles only what changed. Super fast.
 3. Flash
 - VS Code: Ctrl+Shift+B --> Flash (OpenOCD, HEX)
 - CLI
@@ -135,3 +141,31 @@ openocd -f interface/stlink.cfg -f target/stm32f4x.cfg -c "transport select swd;
 ```
 4. Debug
 - Press F5 in VS Code
+
+## Clean and rebuild commands
+- Safe workflow (Standard build):
+```
+cmake --build build -j
+```
+- Clean then build:
+```
+cmake --build build --clean-first -j
+```
+- True fresh build (delete cache + files):
+```
+cmake -E rm -rf build
+$tc = (Resolve-Path .\cmake\toolchain-arm-none-eabi.cmake).Path
+cmake -S . -B build -G Ninja "-DCMAKE_TOOLCHAIN_FILE=$tc"
+cmake --build build -j
+```
+- Just clean (keep CMake files and If you only want to delete object files but keep configuration:):
+```
+ninja -C build clean
+```
+or
+```
+cmake --build build --target clean
+```
+
+- SUMMARY: Use clean build only after big changes (new linker script, toolchain file edits, etc.).
+

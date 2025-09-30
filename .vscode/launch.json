@@ -10,7 +10,7 @@
     "device": "STM32F446RE",
     "configFiles": ["interface/stlink.cfg","target/stm32f4x.cfg"],
     "openOCDLaunchCommands": ["transport select swd","adapter speed 950"],
-    "runToMain": true,
+    "runToEntryPoint": "main", //prev: "runToMain": true,
     "preLaunchTask": "Build (CMake/Ninja)"
   }]
 }
