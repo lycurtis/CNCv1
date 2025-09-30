@@ -1,20 +1,24 @@
 {
+  "version": 4,
   "configurations": [
     {
       "name": "STM32",
-      "includePath": [
-        "${workspaceFolder}/src",
-        "${workspaceFolder}/vendor/Drivers/CMSIS/Include",
-        "${workspaceFolder}/vendor/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
-      ],
+      "compilerPath": "C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc.exe",
+      "intelliSenseMode": "gcc-arm",
       "defines": [
         "STM32F446xx"
       ],
-      "compilerPath": "C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc.exe",
-      "cStandard": "c11",
-      "cppStandard": "c++17",
-      "intelliSenseMode": "gcc-arm"
+      "includePath": [
+        "${workspaceFolder}/src",
+        "${workspaceFolder}/src/app",
+        "${workspaceFolder}/src/config",
+        "${workspaceFolder}/src/bsp",
+        "${workspaceFolder}/src/drivers",
+        "${workspaceFolder}/src/utils",
+        "${workspaceFolder}/vendor/Drivers/CMSIS/Include",
+        "${workspaceFolder}/vendor/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+      ],
+      "compileCommands": "${workspaceFolder}/build/compile_commands.json"
     }
-  ],
-  "version": 4
+  ]
 }

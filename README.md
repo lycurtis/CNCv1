@@ -17,10 +17,10 @@ Designed for STM32F4 (tested on **STM32F446RE Nucleo**) but easily adaptable to 
 ## Prerequisites
 
 Install these tools before building:
+- Ensure to add each <install>\bin to PATH
 
 1. **Arm GNU Toolchain**  
    [Download](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)  
-   - Ensure to add <install>\bin to PATH
    ```sh
    arm-none-eabi-gcc --version
 
@@ -49,6 +49,9 @@ Install these tools before building:
    - C/C++
 
 ## Project Structure 
+```
+tree /f > project_tree.txt
+```
 ```
 Firmware/
 ├─ CMakeLists.txt
@@ -158,6 +161,12 @@ $tc = (Resolve-Path .\cmake\toolchain-arm-none-eabi.cmake).Path
 cmake -S . -B build -G Ninja "-DCMAKE_TOOLCHAIN_FILE=$tc"
 cmake --build build -j
 ```
+or
+```
+rm -r build
+cmake -S . -B build -G Ninja "-DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-arm-none-eabi.cmake"
+```
+
 - Just clean (keep CMake files and If you only want to delete object files but keep configuration:):
 ```
 ninja -C build clean
@@ -168,4 +177,5 @@ cmake --build build --target clean
 ```
 
 - SUMMARY: Use clean build only after big changes (new linker script, toolchain file edits, etc.).
+- This is a continuation of CNCv1 STM32 bare-metal project. Repo is structured with app/, drivers/, bsp/, etc.
 

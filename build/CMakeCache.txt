@@ -227,9 +227,6 @@ CNCv1_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 CNCv1_SOURCE_DIR:STATIC=C:/Users/cly/Desktop/STM32_WS/CNCv1
 
-//Path to a program.
-SIZE:FILEPATH=C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/arm-none-eabi-size.exe
-
 
 ########################
 # INTERNAL cache entries

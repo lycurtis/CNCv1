@@ -1,7 +1,9 @@
 # ninja log v5
-17	59	7809152063580061	CMakeFiles/CNCv1.dir/vendor/Startup/startup_stm32f446xx.s.obj	38989d18ade18cb3
-11	124	7809152064228328	CMakeFiles/CNCv1.dir/src/main.c.obj	6bee63aed3be4310
-14	129	7809152064268221	CMakeFiles/CNCv1.dir/vendor/system_stm32f4xx.c.obj	3fc4285abd0ef236
-129	247	7809152064916481	CNCv1	e98250ea582c3ee8
-4	113	7809156741520305	CMakeFiles/CNCv1.dir/src/main.c.obj	6bee63aed3be4310
-114	240	7809156742224384	CNCv1	e98250ea582c3ee8
+25	64	7809709490276965	CMakeFiles/CNCv1.dir/mcu_support/st/Startup/startup_stm32f446xx.s.obj	739fb3aca6ecec72
+18	141	7809709491034944	CMakeFiles/CNCv1.dir/src/utils/delay.c.obj	c1faed38abc4baba
+15	151	7809709491144657	CMakeFiles/CNCv1.dir/src/config/system_clock.c.obj	660166dac7ee513e
+12	152	7809709491144657	CMakeFiles/CNCv1.dir/src/app/main.c.obj	c980f6dc1a1f1add
+21	152	7809709491144657	CMakeFiles/CNCv1.dir/mcu_support/st/system_stm32f4xx.c.obj	adbd6a4c2a818a66
+154	271	7809709491852751	CNCv1	4447a5806798bceb
+16	119	7809709730434731	CMakeFiles/CNCv1.dir/src/app/main.c.obj	c980f6dc1a1f1add
+120	238	7809709731092969	CNCv1	4447a5806798bceb

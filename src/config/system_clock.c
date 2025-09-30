@@ -1,7 +1,6 @@
-#include "stm32f4xx.h"  // CMSIS device header
+#include "system_clock.h"
 
-
-void SystemClock_Config(void){
+void system_clock_init(void){
     /**
     * @brief  System Clock Configuration
     *         The system Clock is configured as follow : 
@@ -76,27 +75,3 @@ void SystemClock_Config(void){
     SystemCoreClock = 180000000;
 }
 
-static inline void delay(volatile uint32_t time){
-    while (time--) { __NOP(); } // NOP (No OPeration) = “waste 1 CPU cycle, do nothing.”
-    /*
-    Without __NOP(), the compiler sees while(time--); as “does nothing useful” → deletes or shrinks it.
-    With __NOP(), the compiler is forced to keep the loop, because the nop is a real instruction with side effects (time).
-    */
-}
-int main(void){
-    SystemClock_Config();
-
-    // Enable GPIOA clock
-    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
-
-    // Set PA5 as general-purpose output
-    GPIOA->MODER &= ~(3u << (5*2));
-    GPIOA->MODER |=  (1u << (5*2));
-
-    while(1){
-        GPIOA->BSRR |= (1<<5);  // Set the pin PA5
-        delay(5000000);
-		GPIOA->BSRR |= ((1<<5) <<16);  // Reset pin PA5
-        delay(5000000);
-    }
-}
