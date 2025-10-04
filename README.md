@@ -175,6 +175,13 @@ or
 ```
 cmake --build build --target clean
 ```
+## Git
+- Every time you make edits (terminal script):
+```
+git add .
+git commit -m "Your message"
+git push origin main
+```
 
 - SUMMARY: Use clean build only after big changes (new linker script, toolchain file edits, etc.).
 - This is a continuation of CNCv1 STM32 bare-metal project. Repo is structured with app/, drivers/, bsp/, etc.

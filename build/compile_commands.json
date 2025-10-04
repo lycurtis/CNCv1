@@ -19,6 +19,12 @@
 },
 {
   "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build",
+  "command": "C:\\ST\\STM32CubeCLT_1.19.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/app -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/bsp -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/config -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/utils -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -O2 -ffunction-sections -fdata-sections -Wall -Wextra -o CMakeFiles\\CNCv1.dir\\src\\drivers\\stepgen_pwm_tim3.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\drivers\\stepgen_pwm_tim3.c",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\drivers\\stepgen_pwm_tim3.c",
+  "output": "CMakeFiles\\CNCv1.dir\\src\\drivers\\stepgen_pwm_tim3.c.obj"
+},
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build",
   "command": "C:\\ST\\STM32CubeCLT_1.19.0\\GNU-tools-for-STM32\\bin\\arm-none-eabi-gcc.exe -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/app -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/bsp -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/config -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/utils -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -O2 -ffunction-sections -fdata-sections -Wall -Wextra -o CMakeFiles\\CNCv1.dir\\mcu_support\\st\\system_stm32f4xx.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\mcu_support\\st\\system_stm32f4xx.c",
   "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\mcu_support\\st\\system_stm32f4xx.c",
   "output": "CMakeFiles\\CNCv1.dir\\mcu_support\\st\\system_stm32f4xx.c.obj"

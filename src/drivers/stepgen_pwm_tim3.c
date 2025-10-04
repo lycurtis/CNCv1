@@ -94,3 +94,39 @@ void stepgen_stop(void){
     TIM3->CR1 &= ~TIM_CR1_CEN; // Counter disabled
 }
 
+void stepgen_set_hz(uint32_t hz){
+    // Guard and compute ARR from 1 MHz base: ARR = 1e6/hz - 1
+    if(hz == 0){
+        stepgen_stop();
+        return;
+    }
+    uint32_t arr = (1000000UL / hz);
+    if(arr == 0 ){
+        arr = 1; // clamp
+    }
+    arr -= 1UL;
+
+    TIM3->ARR = (uint16_t)arr;
+    TIM3->CCR1 = (uint16_t)((arr + 1UL) >> 1); // 50% duty
+    TIM3->EGR = TIM_EGR_UG; // latch safety at next update
+
+}
+
+void stepgen_dir(bool fwd){
+    if(fwd){
+        X_DIR_PORT->BSRR = (1UL << X_DIR_PIN);
+    }
+    else{
+        X_DIR_PORT->BSRR = (1UL << (X_DIR_PIN+16)); // reset = LOW
+    }
+}
+
+void stepgen_enable(bool enable_low_active){
+    /* TMC2209 EN pin is active LOW. (pass TRUE to enable) */
+    if(enable_low_active){
+        X_EN_PORT->BSRR = (1UL << (X_EN_PIN + 16)); // LOW ==> Enable
+    }
+    else{
+        X_EN_PORT->BSRR = (1UL << X_EN_PIN); // HIGH ==> Disable
+    }
+}

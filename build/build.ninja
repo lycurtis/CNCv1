@@ -74,6 +74,16 @@ build CMakeFiles/CNCv1.dir/src/utils/delay.c.obj: C_COMPILER__CNCv1_unscanned_ C
   TARGET_COMPILE_PDB = CMakeFiles\CNCv1.dir\
   TARGET_PDB = CNCv1.pdb
 
+build CMakeFiles/CNCv1.dir/src/drivers/stepgen_pwm_tim3.c.obj: C_COMPILER__CNCv1_unscanned_ C$:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/stepgen_pwm_tim3.c || cmake_object_order_depends_target_CNCv1
+  DEFINES = -DSTM32F446xx
+  DEP_FILE = CMakeFiles\CNCv1.dir\src\drivers\stepgen_pwm_tim3.c.obj.d
+  FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -O2 -ffunction-sections -fdata-sections -Wall -Wextra
+  INCLUDES = -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/app -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/bsp -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/config -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/utils -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  OBJECT_DIR = CMakeFiles\CNCv1.dir
+  OBJECT_FILE_DIR = CMakeFiles\CNCv1.dir\src\drivers
+  TARGET_COMPILE_PDB = CMakeFiles\CNCv1.dir\
+  TARGET_PDB = CNCv1.pdb
+
 build CMakeFiles/CNCv1.dir/mcu_support/st/system_stm32f4xx.c.obj: C_COMPILER__CNCv1_unscanned_ C$:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/st/system_stm32f4xx.c || cmake_object_order_depends_target_CNCv1
   DEFINES = -DSTM32F446xx
   DEP_FILE = CMakeFiles\CNCv1.dir\mcu_support\st\system_stm32f4xx.c.obj.d
@@ -102,7 +112,7 @@ build CMakeFiles/CNCv1.dir/mcu_support/st/Startup/startup_stm32f446xx.s.obj: ASM
 #############################################
 # Link the executable CNCv1
 
-build CNCv1: C_EXECUTABLE_LINKER__CNCv1_ CMakeFiles/CNCv1.dir/src/app/main.c.obj CMakeFiles/CNCv1.dir/src/config/system_clock.c.obj CMakeFiles/CNCv1.dir/src/utils/delay.c.obj CMakeFiles/CNCv1.dir/mcu_support/st/system_stm32f4xx.c.obj CMakeFiles/CNCv1.dir/mcu_support/st/Startup/startup_stm32f446xx.s.obj
+build CNCv1: C_EXECUTABLE_LINKER__CNCv1_ CMakeFiles/CNCv1.dir/src/app/main.c.obj CMakeFiles/CNCv1.dir/src/config/system_clock.c.obj CMakeFiles/CNCv1.dir/src/utils/delay.c.obj CMakeFiles/CNCv1.dir/src/drivers/stepgen_pwm_tim3.c.obj CMakeFiles/CNCv1.dir/mcu_support/st/system_stm32f4xx.c.obj CMakeFiles/CNCv1.dir/mcu_support/st/Startup/startup_stm32f446xx.s.obj
   LINK_FLAGS = -TC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/st/STM32F446RETX_FLASH.ld -Wl,--gc-sections -Wl,-Map=C:/Users/cly/Desktop/STM32_WS/CNCv1/build/CNCv1.map -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard
   OBJECT_DIR = CMakeFiles\CNCv1.dir
   POST_BUILD = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\cly\Desktop\STM32_WS\CNCv1\build && C:\ST\STM32CubeCLT_1.19.0\GNU-tools-for-STM32\bin\arm-none-eabi-objcopy.exe -O ihex C:/Users/cly/Desktop/STM32_WS/CNCv1/build/CNCv1 C:/Users/cly/Desktop/STM32_WS/CNCv1/build/CNCv1.hex && C:\ST\STM32CubeCLT_1.19.0\GNU-tools-for-STM32\bin\arm-none-eabi-objcopy.exe -O binary C:/Users/cly/Desktop/STM32_WS/CNCv1/build/CNCv1 C:/Users/cly/Desktop/STM32_WS/CNCv1/build/CNCv1.bin && C:\ST\STM32CubeCLT_1.19.0\GNU-tools-for-STM32\bin\arm-none-eabi-size.exe C:/Users/cly/Desktop/STM32_WS/CNCv1/build/CNCv1"

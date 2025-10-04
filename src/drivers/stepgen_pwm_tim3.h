@@ -27,9 +27,12 @@ Therefore PSC = (90MHz/1MHz) - 1 = 89  TIM_PSC_1MHz (90UL - 1UL)
 #define X_EN_PIN 1UL // PB1 (note: LOW = enable)
 
 
-static inline void gpio_out_pp_hs(GPIO_TypeDef* port, uint32_t pin);
-static inline void gpio_af_pp_hs(GPIO_TypeDef* port, uint32_t pin, uint8_t af_val);
+// static inline void gpio_out_pp_hs(GPIO_TypeDef* port, uint32_t pin);
+// static inline void gpio_af_pp_hs(GPIO_TypeDef* port, uint32_t pin, uint8_t af_val);
 
 void stepgen_init();
 void stepgen_start(void);
 void stepgen_stop(void);
+void stepgen_set_hz(uint32_t hz);
+void stepgen_dir(bool fwd);
+void stepgen_enable(bool enable_outputs_low_active);
