@@ -15,8 +15,8 @@
         "${workspaceFolder}/src/bsp",
         "${workspaceFolder}/src/drivers",
         "${workspaceFolder}/src/utils",
-        "${workspaceFolder}/vendor/Drivers/CMSIS/Include",
-        "${workspaceFolder}/vendor/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+        "${workspaceFolder}/mcu_support/Drivers/CMSIS/Include",
+        "${workspaceFolder}/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
       ],
       "compileCommands": "${workspaceFolder}/build/compile_commands.json"
     }
