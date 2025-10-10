@@ -13,6 +13,7 @@ target_sources(${PROJECT_NAME} PRIVATE
   src/config/system_clock.c
   src/utils/delay.c
   src/drivers/stepgen_pwm_tim3.c
+  src/bsp/bsp_gpio.c
   mcu_support/st/system_stm32f4xx.c
   mcu_support/st/Startup/startup_stm32f446xx.s
 )

@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include "bsp_pins.h"
+#include "bsp_gpio.h"
 /* 
 On STM32F446 with SYSCLK=180MHz, APB1 prescaler = 4
 ==> APB1 bus clock = 180/4 = 45MHz 
@@ -18,17 +20,13 @@ Therefore PSC = (90MHz/1MHz) - 1 = 89  TIM_PSC_1MHz (90UL - 1UL)
 #define TIM_PSC_1MHz (90UL - 1UL) 
  
 // X Axis
-#define X_STEP_PORT GPIOA
-#define X_STEP_PIN 6UL // PA6 (TIM3_CH1) AF2
+// #define X_STEP_PORT GPIOA
+// #define X_STEP_PIN 6UL // PA6 (TIM3_CH1) AF2
 #define X_STEP_AF_VAL 2UL // AF2 -> TIM3_CH1
-#define X_DIR_PORT GPIOB
-#define X_DIR_PIN 0UL // PB0
-#define X_EN_PORT GPIOB
-#define X_EN_PIN 1UL // PB1 (note: LOW = enable)
-
-
-// static inline void gpio_out_pp_hs(GPIO_TypeDef* port, uint32_t pin);
-// static inline void gpio_af_pp_hs(GPIO_TypeDef* port, uint32_t pin, uint8_t af_val);
+// #define X_DIR_PORT GPIOB
+// #define X_DIR_PIN 0UL // PB0
+// #define X_EN_PORT GPIOB
+// #define X_EN_PIN 1UL // PB1 (note: LOW = enable)
 
 void stepgen_init();
 void stepgen_start(void);

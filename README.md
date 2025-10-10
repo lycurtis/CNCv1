@@ -178,6 +178,7 @@ cmake --build build --target clean
 ## Git
 - Every time you make edits (terminal script):
 ```
+git status
 git add .
 git commit -m "Your message"
 git push origin main
