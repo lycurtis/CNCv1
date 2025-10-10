@@ -8,6 +8,8 @@ int main(void){
     stepgen_dir(true); 
     stepgen_set_hz(1000); // 1 kHz step rate
     stepgen_start();
-    
-    while(1){}
+
+    while(1){
+        
+    }
 }
