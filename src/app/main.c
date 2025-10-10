@@ -6,7 +6,8 @@ int main(void){
     stepgen_init();
     stepgen_enable(true);
     stepgen_dir(true);
-    stepgen_set_hz(3500); // 1 kHz step rate
+    // Vary speed here
+    stepgen_set_hz(1000); // 1 kHz step rate 
     stepgen_start();
 
     while(1){

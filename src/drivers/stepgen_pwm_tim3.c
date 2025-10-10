@@ -11,16 +11,17 @@
 
 void stepgen_init(){
     // Clock enable
-    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
-    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOBEN;
+    bsp_gpio_en(X_STEP_PORT);
+    bsp_gpio_en(X_DIR_PORT);
+    bsp_gpio_en(X_EN_PORT);
 
     // Timer 3 Enable
     RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
 
     // Configure gpio
-    gpio_af_pp_hs(X_STEP_PORT, X_STEP_PIN, X_STEP_AF_VAL);
-    gpio_out_pp_hs(X_DIR_PORT, X_DIR_PIN);
-    gpio_out_pp_hs(X_EN_PORT, X_EN_PIN);
+    bsp_gpio_af_pp_hs(X_STEP_PORT, X_STEP_PIN, X_STEP_AF_VAL);
+    bsp_gpio_out_pp_hs(X_DIR_PORT, X_DIR_PIN);
+    bsp_gpio_out_pp_hs(X_EN_PORT, X_EN_PIN);
 
     // Default state for safety (TMC2209 Disabled: Enable_Pin = HIGH)
     X_EN_PORT->BSRR |= (1UL << X_EN_PIN); // Set PB1 to HIGH

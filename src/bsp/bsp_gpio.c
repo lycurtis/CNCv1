@@ -1,6 +1,6 @@
 #include "bsp_gpio.h"
 
-void BSP_GPIO_EnableClock(GPIO_TypeDef *port)
+void bsp_gpio_en(GPIO_TypeDef *port)
 {
     if (port == GPIOA)      { RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN; }
     else if (port == GPIOB) { RCC->AHB1ENR |= RCC_AHB1ENR_GPIOBEN; }
@@ -13,7 +13,7 @@ void BSP_GPIO_EnableClock(GPIO_TypeDef *port)
     (void)RCC->AHB1ENR; // dummy read to ensure write completes before further GPIO access (optional)
 }
 
-void gpio_out_pp_hs(GPIO_TypeDef* port, uint32_t pin){
+void bsp_gpio_out_pp_hs(GPIO_TypeDef* port, uint32_t pin){
     /*
     Recall each pin for MODER takes 2 bits. Therefore if we want pin 6 to output mode
     MODER6 will occupy bits 12,13. Hence the pin*2. pin=6 ==> 6*2= 12. Little endianess 
@@ -25,7 +25,7 @@ void gpio_out_pp_hs(GPIO_TypeDef* port, uint32_t pin){
     port->PUPDR &= ~(3UL << (pin*2)); // resistor: no pull (00 reset state)
 }
 
-void gpio_af_pp_hs(GPIO_TypeDef* port, uint32_t pin, uint8_t af_val){
+void bsp_gpio_af_pp_hs(GPIO_TypeDef* port, uint32_t pin, uint8_t af_val){
     port->MODER &= ~(3UL << (pin*2)); // clear bits
     port->MODER |= (2UL << (pin*2));// mode: alternate function mode (10)
 
