@@ -175,15 +175,32 @@ or
 ```
 cmake --build build --target clean
 ```
-## Git
-- Every time you make edits (terminal script):
+
+## The two CMake steps
+1. Configuration (generate build system)
+- This parses all your ```CMakeLists.txt``` and generates the actual Makefiles (or Ninja files) inside your /build folder
 ```
-git status
-git add .
-git commit -m "Your message"
-git push origin main
+cmake -S . -B build
+```
+- or if you want to specify your toolchain file or options
+```
+cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-arm-none-eabi.cmake -DCMAKE_BUILD_TYPE=Debug
 ```
 
+2. Build (compile + link)
+- Once configuration succeeds, you compile using:
+```
+cmake --build build -j
+```
+
+3. Else if things get messy
+- Sometimes CMake caches weird things. You can cleanly start over:
+```
+rm -rf build
+cmake -S . -B build
+cmake --build build -j
+```
 - SUMMARY: Use clean build only after big changes (new linker script, toolchain file edits, etc.).
-- This is a continuation of CNCv1 STM32F446RE bare-metal project. Repo is structured with app/, drivers/, bsp/, etc.
+
+This is a continuation of CNCv1 STM32F446RE bare-metal project. Repo is structured with app/, drivers/, bsp/, etc.
 
