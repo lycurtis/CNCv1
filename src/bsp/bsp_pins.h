@@ -42,9 +42,9 @@
 // #define ESTOP_PORT  GPIOB
 // #define ESTOP_PIN   (1U<<2)
 
-// // Debug UART
-// #define DBG_UART USART2
-// #define DBG_TX_PORT GPIOA
-// #define DBG_TX_PIN  (1U<<2) // PA2 AF7
-// #define DBG_RX_PORT GPIOA
-// #define DBG_RX_PIN  (1U<<3) // PA3 AF7
+// Debug UART2
+#define DBG_TX_PORT GPIOA
+#define DBG_TX_PIN  2UL// PA2 AF7
+
+#define DBG_RX_PORT GPIOA
+#define DBG_RX_PIN  3UL // PA3 AF7
