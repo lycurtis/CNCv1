@@ -1,5 +1,20 @@
 #pragma once
 
+/*-------------- Occupied Pins -------------*/
+/**
+ * PA2 USART2_TX
+ * PA3 USART2_RX
+ * PA6 X_STEP
+ * PA7 Y_STEP
+ * PB0 Z_STEP
+ * PB4 X_DIR
+ * PB5 Y_DIR
+ * PB12 X_EN
+ * PB13 Y_EN
+ * PB14 Z_EN
+ * PC2 Z_DIR
+ * 
+ */
 
 ////////// Axes STEP/DIR/EN + IO //////////
 // X-Axis
@@ -26,7 +41,7 @@
 
 // Z-Axis
 #define Z_STEP_PORT GPIOB
-#define Z_STEP_PIN  0UL // TIM3_CH3
+#define Z_STEP_PIN  0UL // PB0 TIM3_CH3
 #define Z_STEP_AF_VAL 2UL // AF2 -> TIM3_CH2
 
 #define Z_DIR_PORT GPIOC
@@ -44,7 +59,7 @@
 
 // Debug UART2
 #define DBG_TX_PORT GPIOA
-#define DBG_TX_PIN  2UL// PA2 AF7
+#define DBG_TX_PIN  2UL// PA2 -> USART2_TX AF7
 
 #define DBG_RX_PORT GPIOA
-#define DBG_RX_PIN  3UL // PA3 AF7
+#define DBG_RX_PIN  3UL // PA3 -> USART3_RX AF7
