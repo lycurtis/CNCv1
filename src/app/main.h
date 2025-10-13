@@ -2,6 +2,7 @@
 #include "system_clock.h"
 #include "delay.h"
 #include "stepgen_pwm_tim3.h"
+#include "bsp_usart2_debug.h"
 
 
 extern void stepgen_init_all(void);

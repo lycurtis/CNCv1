@@ -41,20 +41,22 @@ void dbg_uart_init(uint32_t pclk1_hz, uint32_t baud){
     USART2->CR1 |= USART_CR1_TE | USART_CR1_RE; // Transmit and Receive enable
 
     // BRR = pclk/baud (oversampling 16) rounded
-    // uint32_t brr = (pclk1_hz + (baud/2u)) / baud;
+    uint32_t brr = (pclk1_hz + (baud/2u)) / baud;
     // uint32_t brr = pclk1_hz/baud;
-    uint32_t brr = pclk1_hz/(16*baud);
+    // uint32_t brr = pclk1_hz/(16*baud);
     USART2->BRR = brr;
 
     USART2->CR1 |= USART_CR1_UE; // enable
 }
 
 void dbg_putc(char c){
-    if(c == '\n'){
-        dbg_putc('\r');
-    }
-    while(!(USART2->SR & USART_SR_TXE)){}
-    USART2->DR = (uint8_t)c;
+    // if(c == '\n'){
+    //     dbg_putc('\r');
+    // }
+    // while(!(USART2->SR & USART_SR_TXE)){}
+    // USART2->DR = (uint8_t)c;
+    while (!(USART2->SR & USART_SR_TXE)) {}  // Wait until transmit buffer empty
+    USART2->DR = (c & 0xFF);
 }
 
 void dbg_write(const char *s){
