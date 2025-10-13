@@ -6,6 +6,7 @@
   ],
   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
   "files.associations": {
-    "stm32f4xx.h": "c"
+    "stm32f4xx.h": "c",
+    "system_clock.h": "c"
   }
 }

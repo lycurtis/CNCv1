@@ -1,5 +1,5 @@
 #include "system_clock.h"
-#include "stm32f4xx.h"  // CMSIS device header
+
 
 void system_clock_init(void){
     /**
@@ -76,5 +76,29 @@ void system_clock_init(void){
     SystemCoreClock = 180000000;
     //pclk1_hz (APB1) 45 MHz
     //pclk2_hz (APB2) 90 MHz 
+}
+
+static uint32_t get_hclk_from_cfgr(void) {
+    // We know you switch to PLL at 180 MHz and set AHB prescaler in CFGR,
+    // so just decode AHB prescaler; SYSCLK is already 180 MHz.
+    const uint32_t sysclk = 180000000UL;
+
+    uint32_t hpre  = (RCC->CFGR >> 4) & 0xFUL;          // HPRE[7:4]
+    uint32_t ahbdiv = (hpre < 8) ? 1UL : (1UL << (hpre - 7UL));
+    return sysclk / ahbdiv;                             // = 180 MHz with your config
+}
+
+uint32_t System_GetPCLK1(void) {
+    uint32_t hclk = get_hclk_from_cfgr();
+    uint32_t ppre1 = (RCC->CFGR >> 10) & 0x7UL;         // PPRE1[12:10]
+    uint32_t apb1div = (ppre1 < 4) ? 1UL : (1UL << (ppre1 - 3UL));
+    return hclk / apb1div;                              // = 45 MHz with your config
+}
+
+uint32_t System_GetPCLK2(void) {
+    uint32_t hclk = get_hclk_from_cfgr();
+    uint32_t ppre2 = (RCC->CFGR >> 13) & 0x7UL;         // PPRE2[15:13]
+    uint32_t apb2div = (ppre2 < 4) ? 1UL : (1UL << (ppre2 - 3UL));
+    return hclk / apb2div;                              // = 90 MHz with your config
 }
 
