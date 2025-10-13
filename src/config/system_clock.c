@@ -74,5 +74,7 @@ void system_clock_init(void){
 
     // Update global System Core Clock
     SystemCoreClock = 180000000;
+    //pclk1_hz (APB1) 45 MHz
+    //pclk2_hz (APB2) 90 MHz 
 }
 
