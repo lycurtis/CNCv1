@@ -1,6 +1,9 @@
 {
   "cmake.generator": "Ninja",
-  "cmake.buildDirectory": "${workspaceFolder}/build",
+  // "cmake.buildDirectory": "${workspaceFolder}/build",
+  "cmake.buildDirectory": "${workspaceFolder}/build/${buildType}",
+  "cmake.buildType": "Debug",   // change to "Release" when needed
+  "cmake.clearOutputBeforeBuild": true,
   "cmake.configureArgs": [
     "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/cmake/toolchain-arm-none-eabi.cmake"
   ],

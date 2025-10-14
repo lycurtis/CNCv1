@@ -1,12 +1,7 @@
 #include "main.h"
 
-volatile uint32_t pclk1;
-volatile uint32_t brrg;
-
 int main(void){
     system_clock_init(); // 180 MHz PLL setup
-    pclk1 = System_GetPCLK1();
-    brrg = 115200;
     dbg_uart_init(45000000, 115200);
 
     stepgen_init_all();
@@ -28,6 +23,6 @@ int main(void){
     stepgen_start_all();
 
     while(1){
-        dbg_putc('Y');
+        dbg_putc('Y\n');
     }
 }
