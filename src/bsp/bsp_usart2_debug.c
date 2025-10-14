@@ -21,19 +21,21 @@ void dbg_uart_init(uint32_t pclk1_hz, uint32_t baud){
     DBG_RX_PORT->MODER |=  (2UL<<(DBG_RX_PIN*2));
 
     // AF7 on both pins
-    if (DBG_TX_PIN < 8){
-        DBG_TX_PORT->AFR[0] |=  (7UL << (DBG_TX_PIN*4));
-    }
-    else{
-        DBG_TX_PORT->AFR[1] |=  (7UL << ((DBG_TX_PIN-8)*4));
-    }
+    // if (DBG_TX_PIN < 8){
+    //     DBG_TX_PORT->AFR[0] |=  (7UL << (DBG_TX_PIN*4));
+    // }
+    // else{
+    //     DBG_TX_PORT->AFR[1] |=  (7UL << ((DBG_TX_PIN-8)*4));
+    // }
 
-    if(DBG_RX_PIN < 8){
-        DBG_RX_PORT->AFR[0] |=  (7UL << (DBG_RX_PIN*4));
-    }
-    else{
-        DBG_RX_PORT->AFR[1] |=  (7UL << ((DBG_RX_PIN-8)*4));
-    }
+    // if(DBG_RX_PIN < 8){
+    //     DBG_RX_PORT->AFR[0] |=  (7UL << (DBG_RX_PIN*4));
+    // }
+    // else{
+    //     DBG_RX_PORT->AFR[1] |=  (7UL << ((DBG_RX_PIN-8)*4));
+    // }
+    DBG_TX_PORT->AFR[0] |=  (7UL << (DBG_TX_PIN*4));
+    DBG_RX_PORT->AFR[0] |=  (7UL << (DBG_RX_PIN*4));
 
     // Configuration: 8N1 (8 data bits, no parity bit, and 1 stop bit), oversampling by 16
     USART2->CR1 |= USART_CR1_TE | USART_CR1_RE; // Transmit and Receive enable
@@ -47,11 +49,6 @@ void dbg_uart_init(uint32_t pclk1_hz, uint32_t baud){
 }
 
 void dbg_putc(char c){
-    // if(c == '\n'){
-    //     dbg_putc('\r');
-    // }
-    // while(!(USART2->SR & USART_SR_TXE)){}
-    // USART2->DR = (uint8_t)c;
     while (!(USART2->SR & USART_SR_TXE)) {}  // Wait until transmit buffer empty
     USART2->DR = (c & 0xFF);
 }

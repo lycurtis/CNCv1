@@ -28,7 +28,6 @@ int main(void){
 
     
     while(1){
-        dbg_putc('Y');
-        
+        dbg_write("Hello\r\n");
     }
 }
