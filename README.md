@@ -44,9 +44,17 @@ Install these tools before building:
    - Confirm ST-LINK shows up in Device Manager without erros
 
 6. **VS Code + Extensions**  
+   - Arm Assembly
+   - C/C++
+   - C/C++ Extension Pack
+   - CMake
    - CMake Tools
    - Cortex-Debug
-   - C/C++
+   - LinkerScript
+   - MemoryView
+   - Peripheral Viewer
+   - RTOS Views
+   
 
 ## Project Structure 
 ```
@@ -74,15 +82,27 @@ Firmware/
 
 ## Toolchain File (cmake/toolchain-arm-none-eabi.cmake)
 ```
+# cmake/arm-gcc-toolchain.cmake
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR arm)
 
-find_program(CMAKE_C_COMPILER arm-none-eabi-gcc)
-find_program(CMAKE_ASM_COMPILER arm-none-eabi-gcc)
-find_program(CMAKE_OBJCOPY arm-none-eabi-objcopy)
-find_program(CMAKE_SIZE arm-none-eabi-size)
+set(TOOLCHAIN_PREFIX arm-none-eabi)
 
-set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+# find_program(CMAKE_C_COMPILER arm-none-eabi-gcc)
+#find_program(CMAKE_CXX_COMPILER arm-none-eabi-g++)
+# find_program(CMAKE_ASM_COMPILER arm-none-eabi-gcc)
+
+# find_program(CMAKE_OBJCOPY  arm-none-eabi-objcopy)
+# find_program(CMAKE_SIZE     arm-none-eabi-size)
+
+#or
+
+find_program(CMAKE_C_COMPILER   ${TOOLCHAIN_PREFIX}-gcc)
+find_program(CMAKE_CXX_COMPILER ${TOOLCHAIN_PREFIX}-g++)
+find_program(CMAKE_ASM_COMPILER ${TOOLCHAIN_PREFIX}-gcc)
+
+find_program(CMAKE_OBJCOPY ${TOOLCHAIN_PREFIX}-objcopy)
+find_program(CMAKE_SIZE    ${TOOLCHAIN_PREFIX}-size)
 ```
 
 ## CMakeLists.txt (minimal)
