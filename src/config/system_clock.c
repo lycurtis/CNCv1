@@ -83,7 +83,7 @@ void system_clock_init(void){
 }
 
 // --- DWT enable / read ---
-static inline void dwt_enable(void){
+void dwt_enable(void){
     CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
     DWT->CYCCNT = 0;
     DWT->CTRL  |= DWT_CTRL_CYCCNTENA_Msk;
@@ -95,12 +95,13 @@ static void tim2_setup_10ms(void){
     RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
 
     TIM2->CR1 = 0;
-    TIM2->CR1 |= TIM_CR1_OPM;     // one-pulse mode (auto-stop after update)
+    TIM2->CR1 |= TIM_CR1_OPM;     // one-pulse mode
     TIM2->PSC = 8999;             // 90 MHz / (8999+1) = 10 kHz
-    TIM2->ARR = 100;              // 10 kHz / 100 = 100 Hz  => 10 ms
-    TIM2->EGR = TIM_EGR_UG;       // latch PSC/ARR
+    TIM2->ARR = 99;               // (99+1) = 100 ticks @10 kHz => 10.000 ms
+    TIM2->EGR = TIM_EGR_UG;       // load PSC/ARR
     TIM2->SR  = 0;                // clear flags
 }
+
 
 static void tim2_start_and_wait(void){
     TIM2->CNT = 0;
@@ -109,7 +110,7 @@ static void tim2_start_and_wait(void){
     while((TIM2->SR & TIM_SR_UIF) == 0) { /* wait */ }
 }
 
-uint32_t measure_10ms_cycles(void){
+uint32_t measure_10ms_cycles(void){ // Expect ~1,800,000. Core Hz ≈ cycles_10ms * 100.
     dwt_enable();
     tim2_setup_10ms();
 
@@ -122,6 +123,3 @@ uint32_t measure_10ms_cycles(void){
 
     return (c1 - c0);          // ~1,800,000 if core = 180 MHz
 }
-
-
-
