@@ -23,6 +23,6 @@ int main(void){
     stepgen_start_all();
 
     while(1){
-        dbg_putc('Y\n');
+        dbg_putc('Y');
     }
 }
