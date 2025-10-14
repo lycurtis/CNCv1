@@ -4,8 +4,9 @@
 
 int main(void){
     system_clock_init(); // 180 MHz PLL setup
-    
-    dbg_uart_init(45000000, 115200);
+    uint32_t pclk1 = 45000000UL; // APB1
+    // uint32_t pclk2 = 90000000UL; // APB2
+    dbg_uart_init(pclk1, 115200);
 
     stepgen_init_all();
 
@@ -27,7 +28,7 @@ int main(void){
 
     
     while(1){
-        // dbg_putc('Y');
+        dbg_putc('Y');
         
     }
 }
