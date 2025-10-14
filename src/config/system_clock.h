@@ -3,5 +3,4 @@
 
 void system_clock_init(void);
 
-uint32_t System_GetPCLK1(void);
-uint32_t System_GetPCLK2(void);
+uint32_t measure_10ms_cycles(void);
