@@ -1,6 +1,11 @@
-#include "main.h"
-#include "stm32f4xx.h"
+#include "stm32f4xx.h"  // CMSIS device header
+#include "system_clock.h"
+#include "delay.h"
+#include "stepgen_pwm_tim3.h"
+#include "bsp_usart2_debug.h"
 
+#define DIR_CW true
+#define DIR_CCW false
 
 int main(void){
     system_clock_init(); // 180 MHz PLL setup
@@ -14,9 +19,9 @@ int main(void){
     stepgen_enable(AXIS_Y, true);
     stepgen_enable(AXIS_Z, true);
 
-    stepgen_dir(AXIS_X, true);
-    stepgen_dir(AXIS_Y, false);
-    stepgen_dir(AXIS_Z, true);
+    stepgen_dir(AXIS_X, DIR_CW);
+    stepgen_dir(AXIS_Y, DIR_CCW);
+    stepgen_dir(AXIS_Z, DIR_CW);
 
     // Vary speed here
     /* Shared freq for now (TIM3): 1 kHz */
@@ -28,6 +33,5 @@ int main(void){
 
     
     while(1){
-        dbg_write("Hello\r\n");
     }
 }

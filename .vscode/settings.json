@@ -10,6 +10,9 @@
   "files.associations": {
     "stm32f4xx.h": "c",
     "system_clock.h": "c",
-    "bsp_common.h": "c"
+    "bsp_common.h": "c",
+    "stepgen_pwm_tim3.h": "c",
+    "bsp_usart2_debug.h": "c",
+    "delay.h": "c"
   }
 }
