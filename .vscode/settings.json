@@ -15,5 +15,6 @@
     "bsp_usart2_debug.h": "c",
     "delay.h": "c",
     "bsp_gpio.h": "c"
-  }
+  },
+  "editor.formatOnSave": true
 }

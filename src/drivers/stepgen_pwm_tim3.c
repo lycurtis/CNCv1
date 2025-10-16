@@ -1,55 +1,49 @@
 #include "stepgen_pwm_tim3.h"
 
 #include <stddef.h>
-#include "bsp_pins.h"
+
 #include "bsp_gpio.h"
+#include "bsp_pins.h"
 
-#define TIM_PSC_1MHz (90UL - 1UL) 
 
-typedef struct{
+#define TIM_PSC_1MHz (90UL - 1UL)
+
+typedef struct {
     // STEP (AF = TIM3 CHn)
-    GPIO_TypeDef *step_port; uint8_t step_pin; uint8_t step_af;uint8_t ch;
+    GPIO_TypeDef* step_port;
+    uint8_t step_pin;
+    uint8_t step_af;
+    uint8_t ch;
 
     // DIR / EN (EN is active-LOW on TMC2209)
-    GPIO_TypeDef *dir_port; uint8_t dir_pin;
+    GPIO_TypeDef* dir_port;
+    uint8_t dir_pin;
 
-    GPIO_TypeDef *en_port; uint8_t en_pin;
-}AxisHw;
+    GPIO_TypeDef* en_port;
+    uint8_t en_pin;
+} AxisHw;
 
 static const AxisHw AXIS_HW[] = {
-    // X-Axis
-    {
-        X_STEP_PORT, X_STEP_PIN, X_STEP_AF_VAL, 1,
-        X_DIR_PORT, X_DIR_PIN,
-        X_EN_PORT, X_EN_PIN
-    },
+        // X-Axis
+        {X_STEP_PORT, X_STEP_PIN, X_STEP_AF_VAL, 1, X_DIR_PORT, X_DIR_PIN, X_EN_PORT, X_EN_PIN},
 
-    // Y-Axis
-    {
-        Y_STEP_PORT, Y_STEP_PIN, Y_STEP_AF_VAL, 2,
-        Y_DIR_PORT, Y_DIR_PIN,
-        Y_EN_PORT, Y_EN_PIN
-    },
+        // Y-Axis
+        {Y_STEP_PORT, Y_STEP_PIN, Y_STEP_AF_VAL, 2, Y_DIR_PORT, Y_DIR_PIN, Y_EN_PORT, Y_EN_PIN},
 
-    // Z-Axis
-    {
-        Z_STEP_PORT, Z_STEP_PIN, Z_STEP_AF_VAL, 3,
-        Z_DIR_PORT, Z_DIR_PIN,
-        Z_EN_PORT, Z_EN_PIN
-    },
+        // Z-Axis
+        {Z_STEP_PORT, Z_STEP_PIN, Z_STEP_AF_VAL, 3, Z_DIR_PORT, Z_DIR_PIN, Z_EN_PORT, Z_EN_PIN},
 };
 
-static inline const AxisHw* ainfo(axis_t a){
+static inline const AxisHw* ainfo(axis_t a) {
     return &AXIS_HW[(int)a];
 }
 
 // Channel enable/disable
-static inline void ch_enable(uint8_t ch, bool on){
-    uint32_t m = (ch==1)? TIM_CCER_CC1E : (ch==2)? TIM_CCER_CC2E : TIM_CCER_CC3E;
-    if(on){
+static inline void ch_enable(uint8_t ch, bool on) {
+    uint32_t m = (ch == 1) ? TIM_CCER_CC1E : (ch == 2) ? TIM_CCER_CC2E : TIM_CCER_CC3E;
+    if (on) {
         TIM3->CCER |= m;
-    }
-    else{
+    } else {
         TIM3->CCER &= ~m;
     }
 }
@@ -57,8 +51,8 @@ static inline void ch_enable(uint8_t ch, bool on){
 /* Map CH -> CCR pointer (array index 1..3 valid) */
 static volatile uint32_t* const CCRn[4] = {NULL, &TIM3->CCR1, &TIM3->CCR2, &TIM3->CCR3};
 
-static void init_axis_gpio_and_channel(axis_t a){
-    const AxisHw *h = ainfo(a);
+static void init_axis_gpio_and_channel(axis_t a) {
+    const AxisHw* h = ainfo(a);
 
     // GPIO clocks + pinmux
     bsp_gpio_en(h->step_port);
@@ -75,25 +69,24 @@ static void init_axis_gpio_and_channel(axis_t a){
     /* Channel config: PWM mode 1 + preload, active high */
     if (h->ch == 1) {
         TIM3->CCMR1 &= ~(TIM_CCMR1_CC1S | TIM_CCMR1_OC1M);
-        TIM3->CCMR1 |=  (6UL << TIM_CCMR1_OC1M_Pos) | TIM_CCMR1_OC1PE;
-        TIM3->CCER  &= ~TIM_CCER_CC1P;
+        TIM3->CCMR1 |= (6UL << TIM_CCMR1_OC1M_Pos) | TIM_CCMR1_OC1PE;
+        TIM3->CCER &= ~TIM_CCER_CC1P;
     } else if (h->ch == 2) {
         TIM3->CCMR1 &= ~(TIM_CCMR1_CC2S | TIM_CCMR1_OC2M);
-        TIM3->CCMR1 |=  (6UL << TIM_CCMR1_OC2M_Pos) | TIM_CCMR1_OC2PE;
-        TIM3->CCER  &= ~TIM_CCER_CC2P;
+        TIM3->CCMR1 |= (6UL << TIM_CCMR1_OC2M_Pos) | TIM_CCMR1_OC2PE;
+        TIM3->CCER &= ~TIM_CCER_CC2P;
     } else { /* ch == 3 */
         TIM3->CCMR2 &= ~(TIM_CCMR2_CC3S | TIM_CCMR2_OC3M);
-        TIM3->CCMR2 |=  (6UL << TIM_CCMR2_OC3M_Pos) | TIM_CCMR2_OC3PE;
-        TIM3->CCER  &= ~TIM_CCER_CC3P;
+        TIM3->CCMR2 |= (6UL << TIM_CCMR2_OC3M_Pos) | TIM_CCMR2_OC3PE;
+        TIM3->CCER &= ~TIM_CCER_CC3P;
     }
 
     ch_enable(h->ch, true);
 }
 
+/*------------ Public API ---------------*/
 
-/*------------ Public API ---------------*/  
-
-void stepgen_init_all(void){\
+void stepgen_init_all(void) {
 
     // Timer 3 Clock Enable
     RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
@@ -104,8 +97,10 @@ void stepgen_init_all(void){\
      */
     TIM3->CR1 = 0;
     TIM3->PSC = TIM_PSC_1MHz; // 1 MHz timer clock
-    TIM3->ARR = 1000 - 1; // period => 1 kHz PWM (With a 1 MHz tick, ARR = 999 → period = 1000 ticks → 1 kHz.)
-    TIM3->CR1 |=  TIM_CR1_ARPE; // Don’t immediately change the timer period when ARR is updated instead wait until the next update event
+    TIM3->ARR = 1000 - 1; // period => 1 kHz PWM (With a 1 MHz tick, ARR = 999 → period = 1000 ticks
+                          // → 1 kHz.)
+    TIM3->CR1 |= TIM_CR1_ARPE; // Don’t immediately change the timer period when ARR is updated
+                               // instead wait until the next update event
 
     // Init all axes (pins + per-channel PWM config)
     init_axis_gpio_and_channel(AXIS_X);
@@ -114,48 +109,48 @@ void stepgen_init_all(void){\
 
     /* 50% duty on all channels initially */
     uint16_t ccr = (uint16_t)((TIM3->ARR + 1U) >> 1);
-    TIM3->CCR1 = ccr; TIM3->CCR2 = ccr; TIM3->CCR3 = ccr;
+    TIM3->CCR1 = ccr;
+    TIM3->CCR2 = ccr;
+    TIM3->CCR3 = ccr;
 
     // Update generation
     TIM3->EGR = TIM_EGR_UG; // Update Generation: load ARR/CCR1, reset CNT
     /*
     Reinitialize the counter and generates an update of the registers. Note that the prescaler
-    counter is cleared too (anyway the prescaler ratio is not affected). The counter is cleared 
-    if the center-aligned mode is selected or if DIR=0 (upcounting), else it takes the 
-    auto-reload value (TIMx_ARR) if DIR=1 (downcounting). 
+    counter is cleared too (anyway the prescaler ratio is not affected). The counter is cleared
+    if the center-aligned mode is selected or if DIR=0 (upcounting), else it takes the
+    auto-reload value (TIMx_ARR) if DIR=1 (downcounting).
 
-    Forces an update event: copies ARR/CCR1 from their preload buffers into the active registers 
-    and resets the counter to 0. Without this, your preloads wouldn’t take effect until the first 
+    Forces an update event: copies ARR/CCR1 from their preload buffers into the active registers
+    and resets the counter to 0. Without this, your preloads wouldn’t take effect until the first
     natural rollover
     */
 }
 
-void stepgen_start_all(void){
+void stepgen_start_all(void) {
     TIM3->CR1 |= TIM_CR1_CEN; // Counter enabled
 }
 
-void stepgen_stop_all(void){
+void stepgen_stop_all(void) {
     TIM3->CR1 &= ~TIM_CR1_CEN; // Counter disabled
 }
 
-void stepgen_enable(axis_t a, bool enable_low_active){
-    const AxisHw *h = ainfo(a);
+void stepgen_enable(axis_t a, bool enable_low_active) {
+    const AxisHw* h = ainfo(a);
 
     /* TMC2209 EN pin is active LOW. (pass TRUE to enable) */
-    if(enable_low_active){
+    if (enable_low_active) {
         h->en_port->BSRR = (1UL << (h->en_pin + 16)); // LOW => enable
-    }
-    else{
-        h->en_port->BSRR = (1UL <<  h->en_pin); // HIGH ==> Disable
+    } else {
+        h->en_port->BSRR = (1UL << h->en_pin); // HIGH ==> Disable
     }
 }
 
-void stepgen_dir(axis_t a, bool fwd){
-    const AxisHw *h = ainfo(a);
-    if(fwd){
-        h->dir_port->BSRR = (1UL <<  h->dir_pin);
-    }
-    else{
+void stepgen_dir(axis_t a, bool fwd) {
+    const AxisHw* h = ainfo(a);
+    if (fwd) {
+        h->dir_port->BSRR = (1UL << h->dir_pin);
+    } else {
         h->dir_port->BSRR = (1UL << (h->dir_pin + 16)); // reset = LOW
     }
 }
@@ -164,14 +159,14 @@ void stepgen_dir(axis_t a, bool fwd){
  * Shared frequency (TIM3): set ARR from 1 MHz base, and 50% duty for selected axis
    ARR is shared -> all axes run at the same Hz
  */
-void stepgen_set_hz(axis_t a, uint32_t hz){
+void stepgen_set_hz(axis_t a, uint32_t hz) {
     // Guard and compute ARR from 1 MHz base: ARR = 1e6/hz - 1
-    if(hz == 0UL){
+    if (hz == 0UL) {
         stepgen_stop_all();
         return;
     }
     uint32_t arr = (1000000UL / hz); // 1 MHz base
-    if(arr == 0UL){
+    if (arr == 0UL) {
         arr = 1UL; // clamp
     }
     arr -= 1UL;
@@ -179,8 +174,8 @@ void stepgen_set_hz(axis_t a, uint32_t hz){
     TIM3->ARR = (uint16_t)arr;
 
     // Selected axis keeps 50% duty
-    const AxisHw *h = ainfo(a);
+    const AxisHw* h = ainfo(a);
     *CCRn[h->ch] = (uint16_t)((arr + 1U) >> 1);
 
-    TIM3->EGR = TIM_EGR_UG;             /* latch ARR/CCR */
+    TIM3->EGR = TIM_EGR_UG; /* latch ARR/CCR */
 }

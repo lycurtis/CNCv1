@@ -1,13 +1,15 @@
 #pragma once
 
 #include <stdint.h>
+
 #include "stm32f4xx.h"
+
 
 /**
  * Enable AHB1 clock for a given GPIO port.
  * Safe to call multiple times.
  */
-void bsp_gpio_en(GPIO_TypeDef *port);
+void bsp_gpio_en(GPIO_TypeDef* port);
 
 /**
  * Configure pin as Push-Pull, High-Speed, No-Pull (Output).
