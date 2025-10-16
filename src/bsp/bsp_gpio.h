@@ -4,7 +4,6 @@
 
 #include "stm32f4xx.h"
 
-
 /**
  * Enable AHB1 clock for a given GPIO port.
  * Safe to call multiple times.

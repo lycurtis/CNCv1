@@ -5,8 +5,21 @@
 #include "bsp_gpio.h"
 #include "bsp_pins.h"
 
-
+/*
+On STM32F446 with SYSCLK=180MHz, APB1 prescaler = 4
+==> APB1 bus clock = 180/4 = 45MHz
+Timers on STM32 have special rules:
+-Case 1: If APB prescaler = 1 --> timer clock = APB clock
+-Case 2: If APB precaaler > 1 --> timer clock = 2*APB clock
+==> TIM3clk=2*APB1=90MHz.
+Now the counter clock frequency (CK_CNT) = fck_psc/(PSC[15:0]+1)
+we want CK_CNT = 1MHz = 90MHz(PSC + 1)
+Therefore PSC = (90MHz/1MHz) - 1 = 89  TIM_PSC_1MHz (90UL - 1UL)
+*/
 #define TIM_PSC_1MHz (90UL - 1UL)
+
+static volatile uint32_t steps_remaining[3] = {0, 0, 0};
+static volatile uint8_t moving_mask = 0; // bit0=X, bit1=Y, bit2=Z
 
 typedef struct {
     // STEP (AF = TIM3 CHn)
@@ -84,12 +97,23 @@ static void init_axis_gpio_and_channel(axis_t a) {
     ch_enable(h->ch, true);
 }
 
+static inline uint8_t axis_bit(axis_t a) {
+    return (uint8_t)(1UL << (int)a);
+}
+
+static inline bool any_moving(void) {
+    return moving_mask != 0;
+}
+
 /*------------ Public API ---------------*/
 
 void stepgen_init_all(void) {
-
     // Timer 3 Clock Enable
     RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
+
+    // Timer 3 DMA/interrupt enable register (Enable update interrupt, NVIC)
+    TIM3->DIER |= TIM_DIER_UIE;
+    NVIC_EnableIRQ(TIM3_IRQn);
 
     /**
      * Timer 3 Base Configuration
@@ -178,4 +202,47 @@ void stepgen_set_hz(axis_t a, uint32_t hz) {
     *CCRn[h->ch] = (uint16_t)((arr + 1U) >> 1);
 
     TIM3->EGR = TIM_EGR_UG; /* latch ARR/CCR */
+}
+
+bool stepgen_busy(axis_t a) {
+    return (moving_mask & axis_bit(a)) != 0;
+}
+
+void stepgen_move_n(axis_t a, uint32_t steps, uint32_t hz) {
+    if (steps == 0 || hz == 0) {
+        return;
+    }
+
+    stepgen_set_hz(a, hz); // shared timer freq for now
+
+    steps_remaining[(int)a] = steps;
+    moving_mask |= axis_bit(a);
+
+    ch_enable(ainfo(a)->ch, true);
+    TIM3->CR1 |= TIM_CR1_CEN;
+}
+
+void TIM3_IRQHandler(void) {
+    if (TIM3->SR & TIM_SR_UIF) {
+        TIM3->SR &= ~TIM_SR_UIF; // clear update flag
+
+        // Each update event = one PWM period = one step
+        for (int i = 0; i < 3; ++i) {
+            if (steps_remaining[i]) {
+                if (--steps_remaining[i] == 0) {
+                    // Finished this axis → disable its channel
+                    uint8_t ch = AXIS_HW[i].ch;
+                    ch_enable(ch, false);
+                    moving_mask &= ~(1u << i);
+                }
+                // NOTE: in this simple version, we assume only ONE axis is moving at a time.
+                // If multiple were armed, they'd all decrement together (shared frequency).
+            }
+        }
+
+        // Stop timer if nothing left
+        if (!any_moving()) {
+            TIM3->CR1 &= ~TIM_CR1_CEN;
+        }
+    }
 }
