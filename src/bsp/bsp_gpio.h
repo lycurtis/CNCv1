@@ -1,7 +1,7 @@
 #pragma once
 
 #include <stdint.h>
-#include "stm32f446xx.h"
+#include "stm32f4xx.h"
 
 /**
  * Enable AHB1 clock for a given GPIO port.

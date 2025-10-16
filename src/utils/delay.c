@@ -1,5 +1,7 @@
 #include "delay.h"
 
+#include "stm32f4xx.h"  
+
 void delay(volatile uint32_t time){
     while (time--) { __NOP(); } // NOP (No OPeration) = “waste 1 CPU cycle, do nothing.”
     /*

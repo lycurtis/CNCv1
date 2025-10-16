@@ -1,5 +1,6 @@
 #pragma once
-#include "bsp_common.h"
+
+#include <stdint.h>
 
 void system_clock_init(void);
 

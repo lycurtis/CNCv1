@@ -1,7 +1,7 @@
 #include "bsp_usart2_debug.h"
+
 #include "bsp_gpio.h"
 #include "bsp_pins.h"
-#include "system_clock.h"
 #include "stm32f4xx.h"
 
 // PA 2 TX

@@ -1,5 +1,6 @@
 #include "system_clock.h"
 
+#include "stm32f4xx.h"
 
 void system_clock_init(void){
     /**
@@ -82,32 +83,35 @@ void system_clock_init(void){
     //pclk2_hz (APB2) 90 MHz 
 }
 
-// --- DWT enable / read ---
+// DWT (Data Watch Point Trigger)
 void dwt_enable(void){
-    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
-    DWT->CYCCNT = 0;
-    DWT->CTRL  |= DWT_CTRL_CYCCNTENA_Msk;
+    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk; // enable trace subsystem (must be set or writes to DWT registers will be ignored)
+    DWT->CYCCNT = 0; // reset cycle counter (32 bit counter that increments every CPU clock tick)
+    DWT->CTRL  |= DWT_CTRL_CYCCNTENA_Msk; // start counting
 }
-static inline uint32_t dwt_cycles(void){ return DWT->CYCCNT; }
+
+static inline uint32_t dwt_cycles(void){ // reads the current cycle count
+    return DWT->CYCCNT; 
+}
 
 // --- TIM2: 10 ms one-shot, assuming TIM2CLK = PCLK1*2 = 90 MHz ---
 static void tim2_setup_10ms(void){
     RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
 
-    TIM2->CR1 = 0;
-    TIM2->CR1 |= TIM_CR1_OPM;     // one-pulse mode
-    TIM2->PSC = 8999;             // 90 MHz / (8999+1) = 10 kHz
-    TIM2->ARR = 99;               // (99+1) = 100 ticks @10 kHz => 10.000 ms
-    TIM2->EGR = TIM_EGR_UG;       // load PSC/ARR
-    TIM2->SR  = 0;                // clear flags
+    TIM2->CR1 = 0; // clear 
+    TIM2->CR1 |= TIM_CR1_OPM; // one-pulse mode: counter stops counting at the next update event (clearing the bit CEN)
+
+    TIM2->PSC = 8999; // Prescaler: The counter clock frequency (CK_CNT) is equal to fCK_PSC / (PSC[15:0] + 1) ==> 90 MHz / (8999+1) = 10 kHz 
+    TIM2->ARR = 99; // Auto Reload: period = (ARR+1) ticks ==> (99+1) = 100 ticks @10 kHz => 10.000 ms
+    TIM2->EGR = TIM_EGR_UG; // load PSC/ARR
+    TIM2->SR  = 0; // clear flags
 }
 
-
 static void tim2_start_and_wait(void){
-    TIM2->CNT = 0;
-    TIM2->SR  = 0;
-    TIM2->CR1 |= TIM_CR1_CEN;
-    while((TIM2->SR & TIM_SR_UIF) == 0) { /* wait */ }
+    TIM2->CNT = 0; // start count from 0
+    TIM2->SR  = 0; // 
+    TIM2->CR1 |= TIM_CR1_CEN; // start counting
+    while((TIM2->SR & TIM_SR_UIF) == 0); // spins until UIF (update interrupt flag) sets an overflow (i.e. after 10ms)
 }
 
 uint32_t measure_10ms_cycles(void){ // Expect ~1,800,000. Core Hz ≈ cycles_10ms * 100.
@@ -118,8 +122,8 @@ uint32_t measure_10ms_cycles(void){ // Expect ~1,800,000. Core Hz ≈ cycles_10m
     tim2_start_and_wait();
 
     uint32_t c0 = dwt_cycles();
-    tim2_start_and_wait();     // exactly one 10 ms period
+    tim2_start_and_wait(); // exactly one 10 ms period
     uint32_t c1 = dwt_cycles();
 
-    return (c1 - c0);          // ~1,800,000 if core = 180 MHz
+    return (c1 - c0); // ~1,800,000 if core = 180 MHz
 }

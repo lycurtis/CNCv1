@@ -1,7 +1,8 @@
 #pragma once
-#include "bsp_common.h"
 
+#include <stdint.h>
 #include <stdbool.h>
+
 /* 
 On STM32F446 with SYSCLK=180MHz, APB1 prescaler = 4
 ==> APB1 bus clock = 180/4 = 45MHz 
