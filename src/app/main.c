@@ -15,34 +15,37 @@ int main(void) {
 
     stepgen_init_all();
 
+    // Y axis, single-axis verification
+    stepgen_enable(AXIS_Y, true);
+    stepgen_dir(AXIS_Y, DIR_CW);
+    stepgen_move_n(AXIS_Y, 1600, 1000);
+    while (stepgen_busy(AXIS_Y)) {
+    }
+    stepgen_dir(AXIS_Y, DIR_CCW);
+    stepgen_move_n(AXIS_Y, 3200, 800);
+    while (stepgen_busy(AXIS_Y)) {
+    }
+
+    // Z axis, single-axis verification
+    stepgen_enable(AXIS_Z, true);
+    stepgen_dir(AXIS_Z, DIR_CW);
+    stepgen_move_n(AXIS_Z, 800, 500);
+    while (stepgen_busy(AXIS_Z)) {
+    }
+    stepgen_dir(AXIS_Z, DIR_CCW);
+    stepgen_move_n(AXIS_Z, 800, 500);
+    while (stepgen_busy(AXIS_Z)) {
+    }
+
+    // Simple 2-axis concurrent move at SAME rate (shared TIM3)
     stepgen_enable(AXIS_X, true);
-    // stepgen_enable(AXIS_Y, true);
-    // stepgen_enable(AXIS_Z, true);
-
+    stepgen_enable(AXIS_Y, true);
     stepgen_dir(AXIS_X, DIR_CW);
-    // stepgen_dir(AXIS_Y, DIR_CCW);
-    // stepgen_dir(AXIS_Z, DIR_CW);
-
-    // Vary speed here
-    /* Shared freq for now (TIM3): 1 kHz */
-    // stepgen_set_hz(AXIS_X, 1000);
-    // stepgen_set_hz(AXIS_Y, 1000);
-    // stepgen_set_hz(AXIS_Z, 1000);
-
-    // 2) Move 200 steps at 1000 steps/s (200 ms move)
-    stepgen_move_n(AXIS_X, 200, 1000);
-
-    // 3) Optionally poll until done (quick-and-dirty for now)
-    while (stepgen_busy(AXIS_X)) { /* spin or later sleep */
+    stepgen_dir(AXIS_Y, DIR_CW);
+    stepgen_move_n(AXIS_X, 1600, 1200); // sets shared timer to 1200 Hz
+    stepgen_move_n(AXIS_Y, 1600, 1200); // same rate; both will decrement each update
+    while (stepgen_busy(AXIS_X) || stepgen_busy(AXIS_Y)) {
     }
-
-    // 4) Do another move the other way
-    stepgen_dir(AXIS_X, DIR_CCW);
-    stepgen_move_n(AXIS_X, 400, 800);
-    while (stepgen_busy(AXIS_X)) {
-    }
-
-    // stepgen_start_all();
 
     while (1) {
     }
