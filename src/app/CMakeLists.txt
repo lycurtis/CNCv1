@@ -1,4 +1,4 @@
 # src/app/CMakeLists.txt
-add_library(app_obj OBJECT
-  main.c
-)
+
+# main stays in the executable; only bring in submodules here
+add_subdirectory(motion)

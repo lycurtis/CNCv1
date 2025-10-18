@@ -1,10 +1,15 @@
 # src/utils/CMakeLists.txt
 
-add_library(utils_obj OBJECT 
- delay.c
+add_library(utils STATIC
+  delay.c
 )
 
-# (Optional: add headers so they show up in IDEs)
-# target_sources(delay_obj PRIVATE
-#   delay.h
-# )
+target_include_directories(utils PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}
+)
+
+# Needs CMSIS because delay.c includes <stm32f4xx.h> (for __NOP)
+target_link_libraries(utils PUBLIC
+  fw_opts
+  cmsis_headers
+)

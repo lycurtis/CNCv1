@@ -1,12 +1,10 @@
 # src/bsp/CMakeLists.txt
-add_library(bsp_obj OBJECT
+
+add_library(bsp STATIC
   bsp_gpio.c
   bsp_usart2_debug.c
 )
 
-# (Optional: add headers so they show up in IDEs)
-# target_sources(bsp_obj PRIVATE
-#   bsp_gpio.h
-#   bsp_usart2_debug.h
-#   bsp_pins.h
-# )
+target_include_directories(bsp PUBLIC ${CMAKE_CURRENT_LIST_DIR})
+target_link_libraries(bsp PUBLIC fw_opts cmsis_headers)
+
