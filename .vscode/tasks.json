@@ -10,22 +10,27 @@
         "${command:cmake.buildDirectory}",
         "-j"
       ],
-      "options": { "cwd": "${workspaceFolder}" },
-      "problemMatcher": [],
-      "group": { "kind": "build", "isDefault": true }
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     },
     {
       "label": "Flash (OpenOCD, HEX)",
       "type": "shell",
       "command": "openocd",
       "args": [
-        "-f", "interface/stlink.cfg",
-        "-f", "target/stm32f4x.cfg",
+        "-f",
+        "interface/stlink.cfg",
+        "-f",
+        "target/stm32f4x.cfg",
         "-c",
         "transport select swd; adapter speed 950; init; reset halt; flash write_image erase ${command:cmake.buildDirectory}/CNCv1.hex; verify_image ${command:cmake.buildDirectory}/CNCv1.hex; reset run; exit"
       ],
-      "dependsOn": "Build (CMake/Ninja)",
-      "problemMatcher": []
+      "dependsOn": "Build (CMake/Ninja)"
     }
   ]
 }

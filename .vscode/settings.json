@@ -1,21 +1,19 @@
 {
   "cmake.generator": "Ninja",
-  // "cmake.buildDirectory": "${workspaceFolder}/build",
   "cmake.buildDirectory": "${workspaceFolder}/build/${buildType}",
-  "cmake.clearOutputBeforeBuild": true,
   "cmake.configureArgs": [
     "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/cmake/toolchain-arm-none-eabi.cmake"
   ],
   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "editor.formatOnSave": true,
   "files.associations": {
+    "*.ld": "ld",
     "stm32f4xx.h": "c",
     "system_clock.h": "c",
-    "bsp_common.h": "c",
-    "stepgen_pwm_tim3.h": "c",
-    "bsp_usart2_debug.h": "c",
-    "delay.h": "c",
     "bsp_gpio.h": "c",
-    "stdbool.h": "c"
-  },
-  "editor.formatOnSave": true
+    "bsp_usart2_debug.h": "c",
+    "stepgen_pwm_tim3.h": "c",
+    "motion_units.h": "c",
+    "app_init.h": "c"
+  }
 }

@@ -6,29 +6,21 @@
       "type": "cortex-debug",
       "request": "launch",
       "servertype": "openocd",
-      "cwd": "${workspaceFolder}",
-
-      // Auto-pick the current build's ELF (Debug/Release)
       "executable": "${command:cmake.launchTargetPath}",
-
-      // Peripherals view
-      "svdFile": "${workspaceFolder}/svd/STM32F446.svd",
+      "cwd": "${workspaceFolder}",
       "device": "STM32F446RE",
-
-      "configFiles": ["interface/stlink.cfg", "target/stm32f4x.cfg"],
-
-      // SWD + speed (kHz)
-      "openOCDLaunchCommands": ["transport select swd", "adapter speed 950"],
-
-      // Start at main, build before run
+      "svdFile": "${workspaceFolder}/svd/STM32F446.svd",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32f4x.cfg"
+      ],
+      "openOCDLaunchCommands": [
+        "transport select swd",
+        "adapter speed 950"
+      ],
       "runToEntryPoint": "main",
       "preLaunchTask": "Build (CMake/Ninja)",
-
-      // Live Watch is fine for globals/statics marked volatile
       "liveWatch": true
-
-      // (Optional) debug logs:
-      // "showDevDebugOutput": "raw"
     }
   ]
 }
