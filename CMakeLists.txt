@@ -1,10 +1,6 @@
-# root CMakeLists.txt
+# CMakeLists.txt
 
 cmake_minimum_required(VERSION 3.22)
-
-# set(CMAKE_TOOLCHAIN_FILE
-#     "${CMAKE_SOURCE_DIR}/cmake/toolchain-arm-none-eabi.cmake"
-#     CACHE FILEPATH "ARM GCC toolchain file")
 
 project(CNCv1 C ASM)
 

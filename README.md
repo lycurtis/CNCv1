@@ -1,21 +1,15 @@
 # CNCv1 – STM32 Bare-Metal + CMake + VS Code
 
-A minimal STM32 bare-metal project template using **CMake**, **Ninja**, **VS Code**, and **OpenOCD**.  
-Designed for STM32F4 (tested on **STM32F446RE Nucleo**) but easily adaptable to other MCUs.
-
 ---
-
 ## Features
 - Bare-metal (no HAL, no LL)
 - CMake + Ninja build system
 - Works in VS Code with CMake Tools + Cortex-Debug
 - OpenOCD for flashing & debugging
 - Minimal project structure (startup, linker, CMSIS only)
-
 ---
 
 ## Prerequisites
-
 Install these tools before building:
 - Ensure to add each <install>\bin to PATH
 
@@ -55,7 +49,6 @@ Install these tools before building:
    - Peripheral Viewer
    - RTOS Views
    
-
 ## Project Structure 
 ```
 tree /f > project_tree.txt
@@ -80,147 +73,49 @@ Firmware/
    └─ launch.json
 ```
 
-## Toolchain File (cmake/toolchain-arm-none-eabi.cmake)
-```
-# cmake/arm-gcc-toolchain.cmake
-set(CMAKE_SYSTEM_NAME Generic)
-set(CMAKE_SYSTEM_PROCESSOR arm)
-
-set(TOOLCHAIN_PREFIX arm-none-eabi)
-
-# find_program(CMAKE_C_COMPILER arm-none-eabi-gcc)
-#find_program(CMAKE_CXX_COMPILER arm-none-eabi-g++)
-# find_program(CMAKE_ASM_COMPILER arm-none-eabi-gcc)
-
-# find_program(CMAKE_OBJCOPY  arm-none-eabi-objcopy)
-# find_program(CMAKE_SIZE     arm-none-eabi-size)
-
-#or
-
-find_program(CMAKE_C_COMPILER   ${TOOLCHAIN_PREFIX}-gcc)
-find_program(CMAKE_CXX_COMPILER ${TOOLCHAIN_PREFIX}-g++)
-find_program(CMAKE_ASM_COMPILER ${TOOLCHAIN_PREFIX}-gcc)
-
-find_program(CMAKE_OBJCOPY ${TOOLCHAIN_PREFIX}-objcopy)
-find_program(CMAKE_SIZE    ${TOOLCHAIN_PREFIX}-size)
-```
-
-## CMakeLists.txt (minimal)
-```
-cmake_minimum_required(VERSION 3.20)
-project(CNCv1 C ASM)
-
-set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/cmake/toolchain-arm-none-eabi.cmake)
-
-add_executable(${PROJECT_NAME}
-  src/main.c
-  vendor/system_stm32f4xx.c
-  vendor/Startup/startup_stm32f446xx.s
-)
-
-target_include_directories(${PROJECT_NAME} PRIVATE
-  vendor/Drivers/CMSIS/Include
-  vendor/Drivers/CMSIS/Device/ST/STM32F4xx/Include
-)
-
-target_compile_definitions(${PROJECT_NAME} PRIVATE STM32F446xx)
-target_compile_options(${PROJECT_NAME} PRIVATE
-  -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-  -O2 -ffunction-sections -fdata-sections -Wall -Wextra
-)
-
-target_link_options(${PROJECT_NAME} PRIVATE
-  -T${CMAKE_SOURCE_DIR}/vendor/STM32F446RETX_FLASH.ld
-  -Wl,--gc-sections -Wl,-Map=$<TARGET_FILE_DIR:${PROJECT_NAME}>/${PROJECT_NAME}.map
-  -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-)
-
-# Generate .hex and .bin automatically
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-  COMMAND ${CMAKE_OBJCOPY} -O ihex   $<TARGET_FILE:${PROJECT_NAME}> $<TARGET_FILE_DIR:${PROJECT_NAME}>/${PROJECT_NAME}.hex
-  COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${PROJECT_NAME}> $<TARGET_FILE_DIR:${PROJECT_NAME}>/${PROJECT_NAME}.bin
-)
-```
 ## Typical Workflow
-1. First Configure ( Run once or when toolchain/build system changes):
+1) Configure (creates build/Debug/)
 ```
-$tc = (Resolve-Path .\cmake\toolchain-arm-none-eabi.cmake).Path
-cmake -S . -B build -G Ninja "-DCMAKE_TOOLCHAIN_FILE=$tc"
+cmake --preset debug
 ```
-- -S . = source directory
-- -B build = put outputs in build/
-- -G Ninja = use Ninja generator
-- -D… = define variables (toolchain here)
-2. Normal Builds (Every time you edit a .c/.h file):
-```
-cmake --build build -j
-```
-- Ninja recompiles only what changed. Super fast.
-3. Flash
-- VS Code: Ctrl+Shift+B --> Flash (OpenOCD, HEX)
-- CLI
-```
-openocd -f interface/stlink.cfg -f target/stm32f4x.cfg -c "transport select swd; adapter speed 950; init; reset halt; flash write_image erase build/CNCv1.hex; verify_image build/CNCv1.hex; reset run; exit"
-```
-4. Debug
-- Press F5 in VS Code
+- This reads CMakePresets.json, sets the toolchain, and generates Ninja files into build/Debug
 
-## Clean and rebuild commands
-- Safe workflow (Standard build):
+2) Build
 ```
-cmake --build build -j
+cmake --build --preset debug
 ```
-- Clean then build:
+- Produces CNCv1.elf/.bin/.hex in build/Debug/
+
+3) Clean vs. Reconfigure
+- Clean compiled objects (keep cache):
 ```
-cmake --build build --clean-first -j
+cmake --build --preset debug --target clean
 ```
-- True fresh build (delete cache + files):
+- Full reset (wipe cache and files):
 ```
-cmake -E rm -rf build
-$tc = (Resolve-Path .\cmake\toolchain-arm-none-eabi.cmake).Path
-cmake -S . -B build -G Ninja "-DCMAKE_TOOLCHAIN_FILE=$tc"
-cmake --build build -j
-```
-or
-```
-rm -r build
-cmake -S . -B build -G Ninja "-DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-arm-none-eabi.cmake"
+cmake -E remove_directory build\Debug
+// or
+Remove-Item -Path .\build\Debug -Recurse -Force
+cmake --preset debug
+cmake --build --preset debug
 ```
 
-- Just clean (keep CMake files and If you only want to delete object files but keep configuration:):
+4) Useful extras
+- Rebuild a specific target:
 ```
-ninja -C build clean
+cmake --build --preset debug --target CNCv1
 ```
-or
+- See available targets:
 ```
-cmake --build build --target clean
-```
-
-## The two CMake steps
-1. Configuration (generate build system)
-- This parses all your ```CMakeLists.txt``` and generates the actual Makefiles (or Ninja files) inside your /build folder
-```
-cmake -S . -B build
-```
-- or if you want to specify your toolchain file or options
-```
-cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-arm-none-eabi.cmake -DCMAKE_BUILD_TYPE=Debug
+cmake --build --preset debug --target help
 ```
 
-2. Build (compile + link)
-- Once configuration succeeds, you compile using:
-```
-cmake --build build -j
-```
+## VS Code (CMake Tools)
+- Configure: Command Palette (ctrl+shift+p) -> "CMake: Delete Cache and Reconfigure" (or "CMake: Configure" if it's the first time)
+- Build: “CMake: Build”
+- Clean: “CMake: Clean”
+- Ensure the active kit/preset is your ARM preset (“ARM Debug”)
 
-3. Else if things get messy
-- Sometimes CMake caches weird things. You can cleanly start over:
-```
-rm -rf build
-cmake -S . -B build
-cmake --build build -j
-```
-- SUMMARY: Use clean build only after big changes (new linker script, toolchain file edits, etc.).
-
+## Statement
 This is a continuation of CNCv1 STM32F446RE bare-metal project. Repo is structured with app/, drivers/, bsp/, etc.
 
