@@ -38,6 +38,7 @@ add_executable(${PROJECT_NAME}
 
 # Link usage requirements and feature libs
 target_link_libraries(${PROJECT_NAME} PRIVATE
+  app_core
   motion
   stepgen
   bsp
