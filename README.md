@@ -49,7 +49,7 @@ Install these tools before building:
    - Peripheral Viewer
    - RTOS Views
    
-## Project Structure 
+## Minimal Project Structure 
 ```
 tree /f > project_tree.txt
 ```
