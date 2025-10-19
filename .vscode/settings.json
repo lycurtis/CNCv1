@@ -1,12 +1,12 @@
 {
-  "cmake.generator": "Ninja",
-  "cmake.buildDirectory": "${workspaceFolder}/build/${buildType}",
+  "cmake.generator": "Ninja", // Tells CMake which build system to "generate" files for
+  "cmake.buildDirectory": "${workspaceFolder}/build/${buildType}", // defines where all the build outputs (obj files, .elf, etc.) will be placed
   "cmake.configureArgs": [
-    "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/cmake/toolchain-arm-none-eabi.cmake"
+    "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/cmake/toolchain-arm-none-eabi.cmake" // a lsit of extra command-line arguments to pass to CMake when it first configures the project
   ],
-  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-  "editor.formatOnSave": true,
-  "files.associations": {
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools", // tells the C/C++ extensions not to guess your include paths and compiler definitions. Instead ask the CMake Tools extensions for that information
+  "editor.formatOnSave": true, // using clang-format every time you save a file
+  "files.associations": { // Manually maps specific file patterns to a language identifier
     "*.ld": "ld",
     "stm32f4xx.h": "c",
     "system_clock.h": "c",

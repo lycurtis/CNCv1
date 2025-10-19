@@ -2,25 +2,25 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug (ST-LINK + OpenOCD)",
-      "type": "cortex-debug",
+      "name": "Debug (ST-LINK + OpenOCD)", // Human readable name that apperas in the debug dropdown menu in VS Code
+      "type": "cortex-debug", // tells VS Code which debugger extension to use
       "request": "launch",
-      "servertype": "openocd",
-      "executable": "${command:cmake.launchTargetPath}",
-      "cwd": "${workspaceFolder}",
-      "device": "STM32F446RE",
-      "svdFile": "${workspaceFolder}/svd/STM32F446.svd",
-      "configFiles": [
-        "interface/stlink.cfg",
-        "target/stm32f4x.cfg"
+      "servertype": "openocd", // specifies the GDB (GNU Debugger) server to use
+      "executable": "${command:cmake.launchTargetPath}", // path to your compiled program (the .elf file) 
+      "cwd": "${workspaceFolder}", // Sets the "Current Working Directory" for the debugger to the root of your project folder
+      "device": "STM32F446RE", // crucial information for OpenOCD to know how to communicate with the chip
+      "svdFile": "${workspaceFolder}/svd/STM32F446.svd", // feature for embedded debugging. An SVD (System View Description)
+      "configFiles": [ // specific configuration files to pass to OpenOCD
+        "interface/stlink.cfg", // Tells OpenOCD to use an ST-LINK debug probe
+        "target/stm32f4x.cfg" // Tells OpenOCD the specifcs of the STM32F4 family of chips
       ],
-      "openOCDLaunchCommands": [
-        "transport select swd",
-        "adapter speed 950"
+      "openOCDLaunchCommands": [ // Commands sent directly to OpenOCD when it starts
+        "transport select swd", // Selects the Serial Wire Debug (SWD) protocol, which is the standard 2-wire debugging interface for modern ARM Cortex chips
+        "adapter speed 950" // Sets the communication speed (950 kHz) between the ST-LINK and the chip
       ],
-      "runToEntryPoint": "main",
-      "preLaunchTask": "Build (CMake/Ninja)",
-      "liveWatch": true
+      "runToEntryPoint": "main", // After flashing the code, the debugger will automatically run the program and pause execution as soon as it enters your main function
+      "preLaunchTask": "Build (CMake/Ninja)", // Tells VS Code to run a task named "Build(CMake/Ninja)" before starting the debug session. 
+      "liveWatch": true // Enables a live watch feature of the Cortex-Debug extension
     }
   ]
 }

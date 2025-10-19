@@ -1,28 +1,28 @@
 {
   "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "Build (CMake/Ninja)",
-      "type": "shell",
-      "command": "cmake",
-      "args": [
+  "tasks": [ // how to compile the project
+    { // Task 1: Build (CMake/Ninja)
+      "label": "Build (CMake/Ninja)", // Name of the task (same as launch.json)
+      "type": "shell", // specifies the system's default terminal
+      "command": "cmake", // the program to execute
+      "args": [ // a list of command-lin arguments to pass to the cmake command
         "--build",
-        "${command:cmake.buildDirectory}",
-        "-j"
+        "${command:cmake.buildDirectory}", // telling CMake where to find build file
+        "-j" // tells the underlying build system (Ninja) to run multiple compilation jobs in parallel, using all your computer's CPU cores to build as fast as possible
       ],
       "options": {
         "cwd": "${workspaceFolder}"
       },
-      "group": {
-        "kind": "build",
-        "isDefault": true
+      "group": { // Tells VS Code how to categorize this task
+        "kind": "build", // identifies this as a build task
+        "isDefault": true // default build task for the project meaning it can run just by pressing the Ctrl+Shift+B keyboard shortcut
       }
     },
-    {
+    { // Task 2: Flash (OpenOCD, HEX)
       "label": "Flash (OpenOCD, HEX)",
       "type": "shell",
-      "command": "openocd",
-      "args": [
+      "command": "openocd", // the program to run is OpenOCD (Open On-Chip Debugger)
+      "args": [ // list of arguments for OpenOCD
         "-f",
         "interface/stlink.cfg",
         "-f",
@@ -30,7 +30,7 @@
         "-c",
         "transport select swd; adapter speed 950; init; reset halt; flash write_image erase ${command:cmake.buildDirectory}/CNCv1.hex; verify_image ${command:cmake.buildDirectory}/CNCv1.hex; reset run; exit"
       ],
-      "dependsOn": "Build (CMake/Ninja)"
+      "dependsOn": "Build (CMake/Ninja)" // Dependency: Tells VS COde that before running the Flash task, it must first successfully run the Build task
     }
   ]
 }
