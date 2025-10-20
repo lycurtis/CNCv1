@@ -20,6 +20,14 @@ void bsp_gpio_en(GPIO_TypeDef* port) {
     }
 }
 
+void bsp_gpio_in_pu(GPIO_TypeDef* port, uint8_t pin) {
+    // Enable PU: MODER=00 (input), PUPDR=01 (pull-up)
+    uint32_t pos = (uint32_t)pin * 2U;
+    port->MODER &= ~(3U << pos);
+    port->PUPDR &= ~(3U << pos);
+    port->PUPDR |= (1U << pos);
+}
+
 void bsp_gpio_out_pp_hs(GPIO_TypeDef* port, uint32_t pin) {
     /*
     Recall each pin for MODER takes 2 bits. Therefore if we want pin 6 to output mode

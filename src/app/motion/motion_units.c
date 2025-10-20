@@ -8,7 +8,7 @@ void motion_init_defaults(void) {
 }
 
 float steps_per_mm(axis_t a) {
-    float spr = (float)cfg[a].full_steps_rev * (float)cfg[a].microsteps;
+    float spr = (float)cfg[a].full_steps_rev * (float)cfg[a].microsteps; // steps per revolution
     return spr / cfg[a].mm_per_rev;
 }
 

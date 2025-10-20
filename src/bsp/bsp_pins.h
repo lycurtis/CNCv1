@@ -2,18 +2,22 @@
 
 /*-------------- Occupied Pins -------------*/
 /**
+ * PA0 X_MIN (Limit Switch)
+ * PA1 Y_MIN (Limit Switch)
  * PA2 USART2_TX
  * PA3 USART2_RX
+ * PA4 Z_MIN (Limit Switch)
  * PA6 X_STEP
  * PA7 Y_STEP
+ *
  * PB0 Z_STEP
  * PB4 X_DIR
  * PB5 Y_DIR
  * PB12 X_EN
  * PB13 Y_EN
  * PB14 Z_EN
- * PC2 Z_DIR
  *
+ * PC2 Z_DIR
  */
 
 ////////// Axes STEP/DIR/EN + IO //////////
@@ -28,6 +32,10 @@
 #define X_EN_PORT GPIOB
 #define X_EN_PIN 12UL // PB12 (note: LOW = enable)
 
+#define X_MIN_PORT GPIOA
+#define X_MIN_PIN 0UL // PA0 (X-axis Limit Switch)
+#define X_MIN_ACTIVE_LOW 1 // 1 = pressed when pin reads 0
+
 // Y-Axis
 #define Y_STEP_PORT GPIOA
 #define Y_STEP_PIN 7UL // PA7, e.g. TIM3_CH2
@@ -38,6 +46,10 @@
 
 #define Y_EN_PORT GPIOB
 #define Y_EN_PIN 13UL // PB13
+
+#define Y_MIN_PORT GPIOA
+#define Y_MIN_PIN 1UL // PA1 (Y-axis Limit Switch)
+#define Y_MIN_ACTIVE_LOW 1 // 1 = pressed when pin reads 0
 
 // Z-Axis
 #define Z_STEP_PORT GPIOB
@@ -50,12 +62,11 @@
 #define Z_EN_PORT GPIOB
 #define Z_EN_PIN 14UL // PB14
 
+#define Z_MIN_PORT GPIOA
+#define Z_MIN_PIN 4UL // PA4 (Z-axis Limit Switch)
+#define Z_MIN_ACTIVE_LOW 1 // 1 = pressed when pin reads 0
+
 ////////// IO //////////
-// Limit switches / E-Stop
-// #define X_MIN_PORT  GPIOC
-// #define X_MIN_PIN   (1U<<13)
-// #define ESTOP_PORT  GPIOB
-// #define ESTOP_PIN   (1U<<2)
 
 // Debug UART2
 #define DBG_TX_PORT GPIOA

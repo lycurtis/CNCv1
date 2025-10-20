@@ -1,6 +1,7 @@
 #include "app_init.h"
 
 #include "bsp_usart2_debug.h"
+#include "limits.h"
 #include "motion_units.h"
 #include "stepgen_pwm_tim3.h"
 #include "system_clock.h"
@@ -15,6 +16,7 @@ void app_init(void) {
     dbg_uart_init(pclk1, 115200); // early logging
 
     // Board GPIO is inited lazily by each driver/bsp module as needed.
+    limits_init_min(); // limit switch
     stepgen_init_all(); // timer + pins for stepper STEP
     motion_init_defaults(); // steps/mm config
 }

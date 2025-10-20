@@ -3,10 +3,9 @@
 
 #include "stepgen_pwm_tim3.h" // for axis_t
 
-
 typedef struct {
     uint16_t full_steps_rev; // e.g., 200
-    uint16_t microsteps; // e.g., 8
+    uint16_t microsteps; // e.g., 8 --> 200*8 - 1600 steps/rev
     float mm_per_rev; // e.g., 8.0 for TR8x8
 } axis_cfg_t;
 

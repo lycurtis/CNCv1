@@ -4,6 +4,7 @@
 
 #include "bsp_gpio.h"
 #include "bsp_pins.h"
+#include "limits.h"
 
 /*
 On STM32F446 with SYSCLK=180MHz, APB1 prescaler = 4
@@ -20,6 +21,7 @@ Therefore PSC = (90MHz/1MHz) - 1 = 89  TIM_PSC_1MHz (90UL - 1UL)
 
 static volatile uint32_t steps_remaining[3] = {0, 0, 0};
 static volatile uint8_t moving_mask = 0; // bit0=X, bit1=Y, bit2=Z
+static volatile uint8_t dir_is_fwd[3] = {1, 1, 1};
 
 typedef struct {
     // STEP (AF = TIM3 CHn)
@@ -172,6 +174,8 @@ void stepgen_enable(axis_t a, bool enable_low_active) {
 
 void stepgen_dir(axis_t a, bool fwd) {
     const AxisHw* h = ainfo(a);
+    dir_is_fwd[(int)a] = fwd;
+
     if (fwd) {
         h->dir_port->BSRR = (1UL << h->dir_pin);
     } else {
@@ -213,6 +217,11 @@ void stepgen_move_n(axis_t a, uint32_t steps, uint32_t hz) {
         return;
     }
 
+    // guard starts when moving negative and MIN is pressed
+    if (!dir_is_fwd[(int)a] && limits_block_neg(a)) {
+        return; // ignore unsafe command
+    }
+
     stepgen_set_hz(a, hz); // shared timer freq for now
 
     steps_remaining[(int)a] = steps;
@@ -229,6 +238,16 @@ void TIM3_IRQHandler(void) {
         // Each update event = one PWM period = one step
         for (int i = 0; i < 3; ++i) {
             if (steps_remaining[i]) {
+
+                // hard stop if moving toward MIN and MIN is asserted
+                if (!dir_is_fwd[i] && limits_block_neg((axis_t)i)) {
+                    uint8_t ch = AXIS_HW[i].ch;
+                    ch_enable(ch, false);
+                    moving_mask &= ~(1u << i);
+                    steps_remaining[i] = 0;
+                    continue; // skip decrement
+                }
+
                 if (--steps_remaining[i] == 0) {
                     // Finished this axis → disable its channel
                     uint8_t ch = AXIS_HW[i].ch;

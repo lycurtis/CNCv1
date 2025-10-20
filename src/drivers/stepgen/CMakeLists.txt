@@ -14,4 +14,5 @@ target_link_libraries(stepgen PUBLIC
   fw_opts
   cmsis_headers
   bsp
+  limits
 )

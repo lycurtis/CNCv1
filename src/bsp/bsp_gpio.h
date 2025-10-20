@@ -11,6 +11,11 @@
 void bsp_gpio_en(GPIO_TypeDef* port);
 
 /**
+ * Configure pin as pull-up (Input)
+ */
+void bsp_gpio_in_pu(GPIO_TypeDef* port, uint8_t pin);
+
+/**
  * Configure pin as Push-Pull, High-Speed, No-Pull (Output).
  */
 void bsp_gpio_out_pp_hs(GPIO_TypeDef* port, uint32_t pin);
