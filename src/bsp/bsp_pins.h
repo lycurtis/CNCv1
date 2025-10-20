@@ -66,7 +66,12 @@
 #define Z_MIN_PIN 4UL // PA4 (Z-axis Limit Switch)
 #define Z_MIN_ACTIVE_LOW 1 // 1 = pressed when pin reads 0
 
-////////// IO //////////
+/*---- IO ----*/
+
+// Emergency Stop (USER button)
+#define ESTOP_PORT GPIOC
+#define ESTOP_PIN 13UL // PC13 (Nucleo blue USER button)
+#define ESTOP_ACTIVE_HIGH 0 // pressed = logic HIGH on Nucleo
 
 // Debug UART2
 #define DBG_TX_PORT GPIOA

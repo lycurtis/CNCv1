@@ -47,6 +47,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
   utils
   fw_opts
   cmsis_headers
+  estop
 )
 
 # Linker script + map + dead-code removal + arch flags

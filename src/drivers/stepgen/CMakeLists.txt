@@ -16,4 +16,5 @@ target_link_libraries(stepgen PUBLIC
   bsp
   limits
   axis
+  estop
 )

@@ -4,6 +4,7 @@
 
 #include "bsp_gpio.h"
 #include "bsp_pins.h"
+#include "estop.h"
 #include "limits.h"
 
 /*
@@ -216,7 +217,9 @@ bool stepgen_busy(axis_t a) {
 }
 
 void stepgen_move_n(axis_t a, uint32_t steps, uint32_t hz) {
-    if (steps == 0 || hz == 0) {
+    estop_latch_if_pressed_fast();
+
+    if (steps == 0 || hz == 0 || estop_latched()) {
         return;
     }
 
@@ -240,6 +243,19 @@ void TIM3_IRQHandler(void) {
     if (TIM3->SR & TIM_SR_UIF) {
         TIM3->SR &= ~TIM_SR_UIF; // clear update flag
 
+        estop_latch_if_pressed_fast();
+        if (estop_latched()) {
+            // Stop every channel, zero counters, and halt the timer
+            for (int i = 0; i < 3; ++i) {
+                if (steps_remaining[i]) {
+                    ch_enable(AXIS_HW[i].ch, false);
+                    steps_remaining[i] = 0;
+                }
+            }
+            moving_mask = 0;
+            TIM3->CR1 &= ~TIM_CR1_CEN;
+            return; // nothing else to do this tick
+        }
         // Each update event = one PWM period = one step
         for (int i = 0; i < 3; ++i) {
             if (steps_remaining[i]) {

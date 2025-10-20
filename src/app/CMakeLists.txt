@@ -20,4 +20,5 @@ target_link_libraries(app_core PUBLIC
   stepgen
   fw_opts
   clock
+  estop
 )

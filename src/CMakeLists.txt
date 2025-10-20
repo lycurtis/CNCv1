@@ -5,4 +5,5 @@ add_subdirectory(config)
 add_subdirectory(utils)
 add_subdirectory(drivers/stepgen)
 add_subdirectory(drivers/limits)
+add_subdirectory(drivers/estop)
 add_subdirectory(app)              # brings in "motion"
