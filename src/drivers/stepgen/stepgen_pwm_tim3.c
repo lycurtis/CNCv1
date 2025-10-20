@@ -21,7 +21,7 @@ Therefore PSC = (90MHz/1MHz) - 1 = 89  TIM_PSC_1MHz (90UL - 1UL)
 
 static volatile uint32_t steps_remaining[3] = {0, 0, 0};
 static volatile uint8_t moving_mask = 0; // bit0=X, bit1=Y, bit2=Z
-static volatile uint8_t dir_is_fwd[3] = {1, 1, 1};
+static volatile uint8_t dir_is_cw[3] = {1, 1, 1}; // remember last CW/CCW
 
 typedef struct {
     // STEP (AF = TIM3 CHn)
@@ -172,11 +172,14 @@ void stepgen_enable(axis_t a, bool enable_low_active) {
     }
 }
 
-void stepgen_dir(axis_t a, bool fwd) {
+void stepgen_dir(axis_t a, bool cw) {
     const AxisHw* h = ainfo(a);
-    dir_is_fwd[(int)a] = fwd;
+    dir_is_cw[(int)a] = cw;
 
-    if (fwd) {
+    const bool high_is_cw = axis_dir_high_is_cw(a);
+    const bool want_high = (cw == high_is_cw);
+
+    if (want_high) {
         h->dir_port->BSRR = (1UL << h->dir_pin);
     } else {
         h->dir_port->BSRR = (1UL << (h->dir_pin + 16)); // reset = LOW
@@ -217,8 +220,10 @@ void stepgen_move_n(axis_t a, uint32_t steps, uint32_t hz) {
         return;
     }
 
-    // guard starts when moving negative and MIN is pressed
-    if (!dir_is_fwd[(int)a] && limits_block_neg(a)) {
+    // guard: if we're commanding motion toward MIN and MIN is pressed → refuse
+    bool cw = dir_is_cw[(int)a];
+    bool moving_neg = cw ? axis_cw_is_negative(a) : !axis_cw_is_negative(a);
+    if (moving_neg && limits_block_neg(a)) {
         return; // ignore unsafe command
     }
 
@@ -240,7 +245,10 @@ void TIM3_IRQHandler(void) {
             if (steps_remaining[i]) {
 
                 // hard stop if moving toward MIN and MIN is asserted
-                if (!dir_is_fwd[i] && limits_block_neg((axis_t)i)) {
+                bool cw = dir_is_cw[i];
+                bool moving_neg =
+                        cw ? axis_cw_is_negative((axis_t)i) : !axis_cw_is_negative((axis_t)i);
+                if (moving_neg && limits_block_neg((axis_t)i)) {
                     uint8_t ch = AXIS_HW[i].ch;
                     ch_enable(ch, false);
                     moving_mask &= ~(1u << i);

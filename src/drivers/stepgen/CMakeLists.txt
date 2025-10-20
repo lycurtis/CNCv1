@@ -15,4 +15,5 @@ target_link_libraries(stepgen PUBLIC
   cmsis_headers
   bsp
   limits
+  axis
 )

@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-typedef enum { AXIS_X = 0, AXIS_Y = 1, AXIS_Z = 2 } axis_t;
+#include "axis.h"
 
 void stepgen_init_all(void);
 void stepgen_start_all(void);

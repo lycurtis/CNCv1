@@ -32,8 +32,8 @@
 #define X_EN_PORT GPIOB
 #define X_EN_PIN 12UL // PB12 (note: LOW = enable)
 
-#define X_MIN_PORT GPIOC
-#define X_MIN_PIN 13UL // PA0 (X-axis Limit Switch)
+#define X_MIN_PORT GPIOA
+#define X_MIN_PIN 0UL // PA0 (X-axis Limit Switch)
 #define X_MIN_ACTIVE_LOW 1 // 1 = pressed when pin reads 0
 
 // Y-Axis
