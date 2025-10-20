@@ -42,7 +42,8 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
   motion
   stepgen
   bsp
-  cfg
+  clock
+  axis
   utils
   fw_opts
   cmsis_headers

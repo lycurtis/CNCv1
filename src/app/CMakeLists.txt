@@ -19,5 +19,5 @@ target_link_libraries(app_core PUBLIC
   motion
   stepgen
   fw_opts
-  cfg
+  clock
 )
