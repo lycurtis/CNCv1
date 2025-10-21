@@ -18,6 +18,7 @@
  * PB14 Z_EN
  *
  * PC2 Z_DIR
+ * PC13 ESTOP (USER Button/Switch)
  */
 
 ////////// Axes STEP/DIR/EN + IO //////////
@@ -70,7 +71,7 @@
 
 // Emergency Stop (USER button)
 #define ESTOP_PORT GPIOC
-#define ESTOP_PIN 13UL // PC13 (Nucleo blue USER button)
+#define ESTOP_PIN 13UL // PC13 Emergency Switch (Default: Nucleo blue USER button)
 #define ESTOP_ACTIVE_HIGH 0 // pressed = logic HIGH on Nucleo
 
 // Debug UART2

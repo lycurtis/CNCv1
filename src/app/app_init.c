@@ -5,14 +5,25 @@
 #include "limits.h"
 #include "motion_units.h"
 #include "stepgen_pwm_tim3.h"
+#include "stm32f4xx.h"
 #include "system_clock.h"
 
+
+static inline void debounce_tick_1k(void) {
+    limits_poll_tick();
+    estop_poll_tick();
+}
+
+void SysTick_Handler(void) {
+    debounce_tick_1k();
+}
 
 // Keep device headers out of app layer on purpose.
 // (Only BSP/drivers should include <stm32f4xx.h>)
 
 void app_init(void) {
     system_clock_init(); // SoC clocks
+    SysTick_Config(SystemCoreClock / 1000U);
     const uint32_t pclk1 = 45000000UL; // APB1 after clock setup
     dbg_uart_init(pclk1, 115200); // early logging
 

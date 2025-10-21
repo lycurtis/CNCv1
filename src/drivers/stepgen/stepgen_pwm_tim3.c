@@ -217,7 +217,6 @@ bool stepgen_busy(axis_t a) {
 }
 
 void stepgen_move_n(axis_t a, uint32_t steps, uint32_t hz) {
-    estop_latch_if_pressed_fast();
 
     if (steps == 0 || hz == 0 || estop_latched()) {
         return;
@@ -243,7 +242,6 @@ void TIM3_IRQHandler(void) {
     if (TIM3->SR & TIM_SR_UIF) {
         TIM3->SR &= ~TIM_SR_UIF; // clear update flag
 
-        estop_latch_if_pressed_fast();
         if (estop_latched()) {
             // Stop every channel, zero counters, and halt the timer
             for (int i = 0; i < 3; ++i) {
