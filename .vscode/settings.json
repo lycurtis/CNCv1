@@ -6,7 +6,7 @@
   ],
   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools", // tells the C/C++ extensions not to guess your include paths and compiler definitions. Instead ask the CMake Tools extensions for that information
   "editor.formatOnSave": true, // using clang-format every time you save a file
-  "files.associations": { // Manually maps specific file patterns to a language identifier
+  "files.associations": {
     "*.ld": "ld",
     "stm32f4xx.h": "c",
     "system_clock.h": "c",
@@ -14,6 +14,7 @@
     "bsp_usart2_debug.h": "c",
     "stepgen_pwm_tim3.h": "c",
     "motion_units.h": "c",
-    "app_init.h": "c"
+    "app_init.h": "c",
+    "stdbool.h": "c"
   }
 }

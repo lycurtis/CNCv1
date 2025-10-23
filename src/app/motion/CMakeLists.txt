@@ -2,6 +2,7 @@
 
 add_library(motion STATIC
   motion_units.c
+  home.c
 )
 
 # motion’s own headers
@@ -15,4 +16,5 @@ target_link_libraries(motion PUBLIC
   stepgen
   fw_opts
   cmsis_headers
+  utils
 )
