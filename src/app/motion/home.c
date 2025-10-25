@@ -6,10 +6,9 @@
 #include "motion_units.h"
 #include "stepgen_pwm_tim3.h"
 
-
 static inline void poll_1ms(void) {
     limits_poll_tick();
-    delay_ms(1);
+    delay(1);
 }
 
 // Convert direction intent to the stepgen's CW boolean
