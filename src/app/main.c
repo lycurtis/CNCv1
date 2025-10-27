@@ -3,7 +3,6 @@
 #include "motion_units.h"
 #include "stepgen_pwm_tim3.h"
 
-
 int main(void) {
     app_init();
     motion_init_defaults();
@@ -25,7 +24,7 @@ int main(void) {
     (void)ok; // (optional) route to a debug print LED/UART later
 
     // Now you can do a test move in + direction (away from MIN)
-    stepgen_dir(AXIS_X, /*CW=*/true); // or compute via axis semantics
+    stepgen_dir(AXIS_X, /*CW=*/false); // or compute via axis semantics
     stepgen_move_n(AXIS_X, mm_to_steps(AXIS_X, 20.0f), feed_to_hz(AXIS_X, 1200.0f));
     while (stepgen_busy(AXIS_X)) {
     }
