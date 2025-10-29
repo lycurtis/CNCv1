@@ -1,24 +1,4 @@
-# Step Pulse Generator (TIM3) — README
-
-A compact, timer-driven STEP/DIR generator for up to three stepper axes (X/Y/Z) on **STM32F446**, using **TIM3 CH1/CH2/CH3** for hardware PWM. One PWM period = one motor step. Designed for drivers like **TMC2209** (ENABLE is active‑LOW), with hard‑stop and e‑stop safety checks.
-
----
-
-## Table of Contents
-
-* [Overview](#overview)
-* [Key Features](#key-features)
-* [Architecture](#architecture)
-* [Timing & Math](#timing--math)
-* [Public API](#public-api)
-* [Quick Start](#quick-start)
-* [Safety (E‑Stop & Limits)](#safety-e-stop--limits)
-* [Integration Notes](#integration-notes)
-* [Porting Guide](#porting-guide)
-* [Troubleshooting](#troubleshooting)
-* [Validation & Test Ideas](#validation--test-ideas)
-* [Future Extensions](#future-extensions)
-* [Glossary](#glossary)
+# Step Pulse Generator (TIM3)
 
 ---
 
@@ -145,64 +125,6 @@ bool stepgen_busy(axis_t a); // true while that axis is mid‑move
 
 ---
 
-## Quick Start
-
-```c
-#include "stepgen_pwm_tim3.h"
-
-int main(void) {
-    // ... clock / BSP init ...
-    stepgen_init_all();
-
-    // Enable X driver and set direction
-    stepgen_enable(AXIS_X, true);     // EN = LOW (active)
-    stepgen_dir(AXIS_X, true);        // CW (per your mapping)
-
-    // Move 200 steps at 1 kHz
-    stepgen_move_n(AXIS_X, 200, 1000);
-
-    // Simple wait loop (or do other work in the meantime)
-    while (stepgen_busy(AXIS_X)) { /* idle */ }
-
-    // Stop timer explicitly (optional; ISR stops it when all moves finish)
-    stepgen_stop_all();
-}
-```
-
-**Simultaneous axes:** You may arm multiple axes back‑to‑back; they will all step at the **same Hz**.
-
----
-
-## Safety (E‑Stop & Limits)
-
-* **E‑stop:** If `estop_latched()` is true inside the ISR, all channels are disabled immediately, counters cleared, `moving_mask` zeroed, and TIM3 is stopped.
-* **Negative limit:** Before decrementing, the ISR re‑checks MIN for axes moving **negative** (determined by last CW/CCW and `axis_cw_is_negative(a)`). If asserted, that axis channel is disabled and its counter cleared.
-* **Positive limit:** Not implemented by default. Mirror the MIN logic if you wire a MAX switch.
-
----
-
-## Integration Notes
-
-1. **Pinmux:** Ensure STEP pins are on the proper **alternate function** for TIM3 CH1/2/3 and configured as **AF push‑pull, high‑speed**. DIR/EN are **push‑pull outputs**.
-2. **Clocking:** This module assumes the default clock tree leading to **TIM3 = 90 MHz**. If your clocks differ, recompute **PSC** to keep a **1 MHz** counter tick.
-3. **Shared frequency:** `stepgen_set_hz` (and `move_n`) write **ARR**, which is shared by all CH1/2/3. If you call `move_n` on Y while X is stepping, Y’s `hz` will set the timer frequency for **both**.
-4. **Driver polarity:** EN is treated as **active‑LOW** (TMC2209). If your driver uses active‑HIGH, invert in `stepgen_enable()` or behind the `bsp_gpio_*` helpers.
-5. **Direction mapping:** Provide `axis_dir_high_is_cw(a)` and `axis_cw_is_negative(a)` in your `axis` module to match your mechanics.
-
----
-
-## Porting Guide
-
-* **Different timer:**
-
-  * Replace TIM3 register references and AF mappings.
-  * Update `CCRn[]` table to point to the new timer’s CCR registers.
-  * Enable the correct bus clock and NVIC IRQ.
-* **Different clock tree:** Recompute PSC to maintain a convenient base (1 MHz suggested). Formula: `PSC = (TIMCLK / 1_000_000) - 1`.
-* **More axes or per‑axis Hz:** Use additional timers (TIM4, TIM2, etc.) or implement a software scheduler (e.g., Bresenham/DDA) on one timer.
-
----
-
 ## Troubleshooting
 
 * **No motion:**
@@ -248,10 +170,3 @@ int main(void) {
 * **ARPE** — Auto‑reload preload enable (glitch‑free ARR updates)
 * **EGR UG** — Event Generation: Update (latch ARR/CCR, reset CNT)
 
----
-
-**Authoring Notes**
-
-* Source: `stepgen_pwm_tim3.c`
-* Header: `stepgen_pwm_tim3.h`
-* License: add your preferred license header (e.g., MIT)

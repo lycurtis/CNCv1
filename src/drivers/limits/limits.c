@@ -20,16 +20,19 @@ static inline uint8_t deb_tick(Deb* d, uint8_t sample) {
         d->last_sample = sample;
         return d->stable;
     }
+
     if (sample != d->last_sample) {
         d->last_sample = sample;
         d->cnt = 1;
     } else if (d->cnt < 255) {
         d->cnt++;
     }
+
     if (d->cnt >= DEBOUNCE_TICKS) {
         d->stable = sample;
         d->cnt = 0;
     }
+
     return d->stable;
 }
 

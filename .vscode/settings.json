@@ -15,6 +15,7 @@
     "stepgen_pwm_tim3.h": "c",
     "motion_units.h": "c",
     "app_init.h": "c",
-    "stdbool.h": "c"
+    "stdbool.h": "c",
+    "axis.h": "c"
   }
 }
