@@ -2,8 +2,8 @@
 static axis_cfg_t cfg[3];
 
 void motion_init_defaults(void) {
-    cfg[AXIS_X] = (axis_cfg_t){200, 8, 8.0f};
-    cfg[AXIS_Y] = (axis_cfg_t){200, 8, 8.0f};
+    cfg[AXIS_X] = (axis_cfg_t){200, 8, 40.0f};
+    cfg[AXIS_Y] = (axis_cfg_t){200, 8, 40.0f};
     cfg[AXIS_Z] = (axis_cfg_t){200, 8, 8.0f};
 }
 
