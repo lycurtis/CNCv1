@@ -3,31 +3,34 @@
 #include "motion_units.h"
 #include "stepgen_pwm_tim3.h"
 
+static bool home_one(axis_t a, float fast, float slow, float backoff, float span, float offset) {
+    stepgen_enable(a, true); // ensure driver enabled
+    const home_params_t p = {.fast_feed_mm_min = fast,
+                             .slow_feed_mm_min = slow,
+                             .backoff_mm = backoff,
+                             .seek_span_mm = span,
+                             .home_offset_mm = offset};
+    return home_axis_blocking(a, &p);
+}
+
 int main(void) {
     app_init();
     motion_init_defaults();
     home_init();
 
-    // Example params — tweak per axis mechanics:
-    const home_params_t HX = {
-            .fast_feed_mm_min = 1800.0f,
-            .slow_feed_mm_min = 300.0f,
-            .backoff_mm = 3.0f,
-            .seek_span_mm = 200.0f, // larger than worst-case distance to MIN
-            .home_offset_mm = 1.0f // end 1 mm off the switch, released
-    };
+    // TUNE per axis mechanics. Start conservative:
+    const float FAST = 1800.0f; // fast seek
+    const float SLOW = 300.0f; // slow latch
+    const float BACK = 3.0f; // mm to clear switch
+    const float SPAN = 220.0f; // long enough to *guarantee* you reach MIN
+    const float OFFS = 1.0f; // sit 1 mm off the switch at the end
 
-    stepgen_enable(AXIS_X, true);
+    bool okX = home_one(AXIS_X, FAST, SLOW, BACK, SPAN, OFFS);
+    bool okY = home_one(AXIS_Y, FAST, SLOW, BACK, SPAN, OFFS);
+    bool okZ = home_one(AXIS_Z, FAST, SLOW, BACK, SPAN, OFFS);
 
-    // Home X only (one feature at a time)
-    bool ok = home_axis_blocking(AXIS_X, &HX);
-    (void)ok; // (optional) route to a debug print LED/UART later
-
-    // // Now you can do a test move in + direction (away from MIN)
-    // stepgen_dir(AXIS_X, /*CW=*/false); // or compute via axis semantics
-    // stepgen_move_n(AXIS_X, mm_to_steps(AXIS_X, 20.0f), feed_to_hz(AXIS_X, 1200.0f));
-    // while (stepgen_busy(AXIS_X)) {
-    // }
+    // Simple success check (replace with LEDs/UART if you have them):
+    volatile bool all_ok = okX && okY && okZ;
 
     for (;;) { /* superloop */
     }
