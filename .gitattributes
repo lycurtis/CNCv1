@@ -1,0 +1,4 @@
+# Turn off Linguist’s auto-exclusions
+* linguist-vendored=false
+* linguist-generated=false
+* linguist-detectable=true
