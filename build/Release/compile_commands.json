@@ -1,0 +1,80 @@
+[
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Release",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/app -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/app/motion -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/stepgen -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/bsp -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/limits -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/config/axis -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/estop -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/utils -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/config/clock -O3 -DNDEBUG -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Wall -Wextra -O2 -o CMakeFiles\\CNCv1.dir\\src\\app\\main.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\app\\main.c",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\app\\main.c",
+  "output": "CMakeFiles\\CNCv1.dir\\src\\app\\main.c.obj"
+},
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Release",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -O3 -DNDEBUG -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Wall -Wextra -O2 -o mcu_support\\CMakeFiles\\stm32_startup.dir\\st\\system_stm32f4xx.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\mcu_support\\st\\system_stm32f4xx.c",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\mcu_support\\st\\system_stm32f4xx.c",
+  "output": "mcu_support\\CMakeFiles\\stm32_startup.dir\\st\\system_stm32f4xx.c.obj"
+},
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Release",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -O3 -DNDEBUG -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Wall -Wextra -O2 -o mcu_support\\CMakeFiles\\stm32_startup.dir\\st\\Startup\\startup_stm32f446xx.s.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\mcu_support\\st\\Startup\\startup_stm32f446xx.s",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\mcu_support\\st\\Startup\\startup_stm32f446xx.s",
+  "output": "mcu_support\\CMakeFiles\\stm32_startup.dir\\st\\Startup\\startup_stm32f446xx.s.obj"
+},
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Release",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/bsp -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -O3 -DNDEBUG -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Wall -Wextra -O2 -o src\\bsp\\CMakeFiles\\bsp.dir\\bsp_gpio.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\bsp\\bsp_gpio.c",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\bsp\\bsp_gpio.c",
+  "output": "src\\bsp\\CMakeFiles\\bsp.dir\\bsp_gpio.c.obj"
+},
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Release",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/bsp -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -O3 -DNDEBUG -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Wall -Wextra -O2 -o src\\bsp\\CMakeFiles\\bsp.dir\\bsp_usart2_debug.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\bsp\\bsp_usart2_debug.c",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\bsp\\bsp_usart2_debug.c",
+  "output": "src\\bsp\\CMakeFiles\\bsp.dir\\bsp_usart2_debug.c.obj"
+},
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Release",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/config/clock -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -O3 -DNDEBUG -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Wall -Wextra -O2 -o src\\config\\clock\\CMakeFiles\\clock.dir\\system_clock.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\config\\clock\\system_clock.c",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\config\\clock\\system_clock.c",
+  "output": "src\\config\\clock\\CMakeFiles\\clock.dir\\system_clock.c.obj"
+},
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Release",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/utils -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -O3 -DNDEBUG -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Wall -Wextra -O2 -o src\\utils\\CMakeFiles\\utils.dir\\delay.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\utils\\delay.c",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\utils\\delay.c",
+  "output": "src\\utils\\CMakeFiles\\utils.dir\\delay.c.obj"
+},
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Release",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/stepgen -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/bsp -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/limits -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/config/axis -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/estop -O3 -DNDEBUG -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Wall -Wextra -O2 -o src\\drivers\\stepgen\\CMakeFiles\\stepgen.dir\\stepgen_pwm_tim3.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\drivers\\stepgen\\stepgen_pwm_tim3.c",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\drivers\\stepgen\\stepgen_pwm_tim3.c",
+  "output": "src\\drivers\\stepgen\\CMakeFiles\\stepgen.dir\\stepgen_pwm_tim3.c.obj"
+},
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Release",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/limits -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/bsp -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/config/axis -O3 -DNDEBUG -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Wall -Wextra -O2 -o src\\drivers\\limits\\CMakeFiles\\limits.dir\\limits.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\drivers\\limits\\limits.c",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\drivers\\limits\\limits.c",
+  "output": "src\\drivers\\limits\\CMakeFiles\\limits.dir\\limits.c.obj"
+},
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Release",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/estop -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/bsp -O3 -DNDEBUG -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Wall -Wextra -O2 -o src\\drivers\\estop\\CMakeFiles\\estop.dir\\estop.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\drivers\\estop\\estop.c",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\drivers\\estop\\estop.c",
+  "output": "src\\drivers\\estop\\CMakeFiles\\estop.dir\\estop.c.obj"
+},
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Release",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/app -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/app/motion -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/stepgen -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/bsp -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/limits -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/config/axis -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/estop -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/utils -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/config/clock -O3 -DNDEBUG -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Wall -Wextra -O2 -o src\\app\\CMakeFiles\\app_core.dir\\app_init.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\app\\app_init.c",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\app\\app_init.c",
+  "output": "src\\app\\CMakeFiles\\app_core.dir\\app_init.c.obj"
+},
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Release",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/app/motion -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/stepgen -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/bsp -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/limits -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/config/axis -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/estop -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/utils -O3 -DNDEBUG -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Wall -Wextra -O2 -o src\\app\\motion\\CMakeFiles\\motion.dir\\motion_units.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\app\\motion\\motion_units.c",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\app\\motion\\motion_units.c",
+  "output": "src\\app\\motion\\CMakeFiles\\motion.dir\\motion_units.c.obj"
+},
+{
+  "directory": "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Release",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -DSTM32F446xx -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/app/motion -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/stepgen -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/bsp -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/limits -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/config/axis -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/drivers/estop -IC:/Users/cly/Desktop/STM32_WS/CNCv1/src/utils -O3 -DNDEBUG -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -ffunction-sections -fdata-sections -Wall -Wextra -O2 -o src\\app\\motion\\CMakeFiles\\motion.dir\\home.c.obj -c C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\app\\motion\\home.c",
+  "file": "C:\\Users\\cly\\Desktop\\STM32_WS\\CNCv1\\src\\app\\motion\\home.c",
+  "output": "src\\app\\motion\\CMakeFiles\\motion.dir\\home.c.obj"
+}
+]

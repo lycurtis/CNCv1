@@ -1,0 +1,23 @@
+# ninja log v5
+30	104	7848044911750667	mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj	fa812d23c616a271
+24	190	7848044912598394	CMakeFiles/CNCv1.dir/src/app/main.c.obj	8eb4e7dac7e10daa
+45	345	7848044914184154	src/utils/CMakeFiles/utils.dir/delay.c.obj	2bffab4f4ba0e709
+106	357	7848044914144255	src/app/CMakeFiles/app_core.dir/app_init.c.obj	b5977d5e75ae25eb
+33	361	7848044914184154	src/bsp/CMakeFiles/bsp.dir/bsp_gpio.c.obj	de7aa007863c197
+58	371	7848044914174184	src/drivers/estop/CMakeFiles/estop.dir/estop.c.obj	fc6a559868f67ef4
+40	378	7848044914154234	src/config/clock/CMakeFiles/clock.dir/system_clock.c.obj	ca97a1fe2395ebb9
+28	386	7848044914144255	mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj	b244767fa1ae5fe2
+191	387	7848044914353696	src/app/motion/CMakeFiles/motion.dir/motion_units.c.obj	7a6fe58020786411
+54	387	7848044914453434	src/drivers/limits/CMakeFiles/limits.dir/limits.c.obj	c15220ec3bb5adac
+36	388	7848044914393593	src/bsp/CMakeFiles/bsp.dir/bsp_usart2_debug.c.obj	b0e444f1d927b8f4
+50	407	7848044914792537	src/drivers/stepgen/CMakeFiles/stepgen.dir/stepgen_pwm_tim3.c.obj	b2aef1bebce30bfe
+346	452	7848044915261269	src/utils/libutils.a	31fd80f46ccb1e5d
+378	470	7848044915450767	src/config/clock/libclock.a	726b86a930903609
+388	471	7848044915460738	src/bsp/libbsp.a	8e7934f0753916ad
+358	499	7848044915739987	src/app/motion/CMakeFiles/motion.dir/home.c.obj	1e8f0419cf296a66
+471	538	7848044916138922	src/drivers/limits/liblimits.a	632bef109a9d0138
+478	541	7848044916178815	src/drivers/estop/libestop.a	21e37805d5fca517
+541	595	7848044916717376	src/drivers/stepgen/libstepgen.a	e668a582953e57dc
+595	649	7848044917255943	src/app/motion/libmotion.a	787a7cba82f107b3
+650	713	7848044917894227	src/app/libapp_core.a	8caf4209dd2cf383
+713	906	7848044919260574	CNCv1	29df49890f20d6ec
