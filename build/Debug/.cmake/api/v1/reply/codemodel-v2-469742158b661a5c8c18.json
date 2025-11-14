@@ -1,0 +1,336 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "mcu_support",
+					"jsonFile" : "directory-mcu_support-Debug-1de1fc5533cd9ca22a89.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "mcu_support",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						3,
+						4,
+						7,
+						8,
+						9,
+						10,
+						11
+					],
+					"jsonFile" : "directory-src-Debug-c94b7c2814d5a21df52c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/bsp",
+					"jsonFile" : "directory-src.bsp-Debug-57aff809afff32316867.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/bsp",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "src/config",
+					"childIndexes" : 
+					[
+						5,
+						6
+					],
+					"jsonFile" : "directory-src.config-Debug-5eb02759ebc656e3bb6d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/config"
+				},
+				{
+					"build" : "src/config/clock",
+					"jsonFile" : "directory-src.config.clock-Debug-90bcd948cb0ae97a0ebb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/config/clock",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "src/config/axis",
+					"jsonFile" : "directory-src.config.axis-Debug-7c92f445625d9f210651.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "src/config/axis"
+				},
+				{
+					"build" : "src/utils",
+					"jsonFile" : "directory-src.utils-Debug-63aae164cb9969211904.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/utils",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "src/drivers/stepgen",
+					"jsonFile" : "directory-src.drivers.stepgen-Debug-3ffe9b9750a6ca0325a3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/drivers/stepgen",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "src/drivers/limits",
+					"jsonFile" : "directory-src.drivers.limits-Debug-73ed3fc40572b1a57638.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/drivers/limits",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "src/drivers/estop",
+					"jsonFile" : "directory-src.drivers.estop-Debug-a2cbc8fe61b49402fe11.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/drivers/estop",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "src/app",
+					"childIndexes" : 
+					[
+						12
+					],
+					"jsonFile" : "directory-src.app-Debug-de77eec203e76141027b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "src/app",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "src/app/motion",
+					"jsonFile" : "directory-src.app.motion-Debug-14d8b96da03444ddeee6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 0,
+					"source" : "src/app/motion",
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					],
+					"name" : "CNCv1",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CNCv1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CNCv1-Debug-7326d542fc27b3e457e7.json",
+					"name" : "CNCv1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "app_core::@ff93792cf40911dae1b8",
+					"jsonFile" : "target-app_core-Debug-defb1c825f4e5d95f3b6.json",
+					"name" : "app_core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "bsp::@0a28bd9477e0fec67aae",
+					"jsonFile" : "target-bsp-Debug-4e2741b26eac42a5a315.json",
+					"name" : "bsp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "clock::@06a4bc6a65450e4a6f10",
+					"jsonFile" : "target-clock-Debug-cb4227ad1a50c2b81478.json",
+					"name" : "clock",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "estop::@33c8612bff19bd68d183",
+					"jsonFile" : "target-estop-Debug-16d834ce44c42078deff.json",
+					"name" : "estop",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "limits::@da301df73464ba386e64",
+					"jsonFile" : "target-limits-Debug-c931fac729968459b9bd.json",
+					"name" : "limits",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "motion::@ba29d3c04a04fce76fbe",
+					"jsonFile" : "target-motion-Debug-a87cf1993f5b985ac571.json",
+					"name" : "motion",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "stepgen::@368eba4d3a02fa47f724",
+					"jsonFile" : "target-stepgen-Debug-a059a6d4a554f25b5b67.json",
+					"name" : "stepgen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "stm32_startup::@6a44f30027249c14bdb2",
+					"jsonFile" : "target-stm32_startup-Debug-2e50ec245852e37cd3f8.json",
+					"name" : "stm32_startup",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "utils::@f1b38b22aeb65474a6c5",
+					"jsonFile" : "target-utils-Debug-314d04ccaf420024e885.json",
+					"name" : "utils",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/cly/Desktop/STM32_WS/CNCv1/build/Debug",
+		"source" : "C:/Users/cly/Desktop/STM32_WS/CNCv1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

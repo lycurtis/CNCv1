@@ -1,0 +1,1 @@
+-IC:/Users/cly/Desktop/STM32_WS/CNCv1/tests/../src/app/motion -IC:/Users/cly/Desktop/STM32_WS/CNCv1/tests/../src/drivers/stepgen -IC:/Users/cly/Desktop/STM32_WS/CNCv1/tests/../mcu_support/Drivers/CMSIS/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/tests/../mcu_support/Drivers/CMSIS/Device/ST/STM32F4xx/Include -IC:/Users/cly/Desktop/STM32_WS/CNCv1/tests/../src/config/axis

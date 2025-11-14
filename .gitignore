@@ -1,74 +1,74 @@
-# --- CMake out-of-source builds ---
-/build/
-/CMakeFiles/
-/CMakeCache.txt
-/cmake_install.cmake
-/compile_commands.json
-/**/*.dir/
-**/.ninja_log
-**/.ninja_deps
-**/build.ninja
-**/rules.ninja
-**/CMakeConfigureLog.yaml
-**/TargetDirectories.txt
-**/CMakeScratch/
+# # --- CMake out-of-source builds ---
+# /build/
+# /CMakeFiles/
+# /CMakeCache.txt
+# /cmake_install.cmake
+# /compile_commands.json
+# /**/*.dir/
+# **/.ninja_log
+# **/.ninja_deps
+# **/build.ninja
+# **/rules.ninja
+# **/CMakeConfigureLog.yaml
+# **/TargetDirectories.txt
+# **/CMakeScratch/
 
-# In case a build sneaks into subdirs
-**/build/
-**/CMakeFiles/
-**/CMakeCache.txt
-**/cmake_install.cmake
-**/compile_commands.json
+# # In case a build sneaks into subdirs
+# **/build/
+# **/CMakeFiles/
+# **/CMakeCache.txt
+# **/cmake_install.cmake
+# **/compile_commands.json
 
-# --- Tool outputs (firmware/images/maps/dumps) ---
-*.elf
-*.hex
-*.bin
-*.map
-*.list
-*.lst
+# # --- Tool outputs (firmware/images/maps/dumps) ---
+# *.elf
+# *.hex
+# *.bin
+# *.map
+# *.list
+# *.lst
 
-# --- Object & intermediate files ---
-*.o
-*.obj
-*.a
-*.lib
-*.d
-*.su
+# # --- Object & intermediate files ---
+# *.o
+# *.obj
+# *.a
+# *.lib
+# *.d
+# *.su
 
-# --- Debugger/trace/cache ---
-*.gdb
-.gdbhistory
-*.svd
-*.launch
-*.trace
-*.log
+# # --- Debugger/trace/cache ---
+# *.gdb
+# .gdbhistory
+# *.svd
+# *.launch
+# *.trace
+# *.log
 
-# --- OpenOCD / CubeProgrammer misc ---
-*.stlink*
-*.stldr
-*.settings
-STM32CubeIDE.*
-STM32CubeMX.*.ioc
+# # --- OpenOCD / CubeProgrammer misc ---
+# *.stlink*
+# *.stldr
+# *.settings
+# STM32CubeIDE.*
+# STM32CubeMX.*.ioc
 
-# --- Editor / IDE (optional: keep .vscode if you want to share presets) ---
-.vscode/
-.idea/
-*.code-workspace
+# # --- Editor / IDE (optional: keep .vscode if you want to share presets) ---
+# .vscode/
+# .idea/
+# *.code-workspace
 
-# --- OS-specific noise ---
-.DS_Store
-Thumbs.db
-ehthumbs.db
-desktop.ini
+# # --- OS-specific noise ---
+# .DS_Store
+# Thumbs.db
+# ehthumbs.db
+# desktop.ini
 
-# --- Python/aux tooling (if you ever add scripts) ---
-__pycache__/
-*.pyc
-.venv/
-venv/
+# # --- Python/aux tooling (if you ever add scripts) ---
+# __pycache__/
+# *.pyc
+# .venv/
+# venv/
 
-# --- Backup/swap ---
-*~
-*.swp
-*.swo
+# # --- Backup/swap ---
+# *~
+# *.swp
+# *.swo

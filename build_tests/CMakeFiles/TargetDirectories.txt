@@ -1,0 +1,4 @@
+C:/Users/cly/Desktop/STM32_WS/CNCv1/build_tests/CMakeFiles/test_motion_units.dir
+C:/Users/cly/Desktop/STM32_WS/CNCv1/build_tests/CMakeFiles/test.dir
+C:/Users/cly/Desktop/STM32_WS/CNCv1/build_tests/CMakeFiles/edit_cache.dir
+C:/Users/cly/Desktop/STM32_WS/CNCv1/build_tests/CMakeFiles/rebuild_cache.dir

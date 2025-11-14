@@ -1,0 +1,1291 @@
+Archive member included to satisfy reference by file (symbol)
+
+src/app/libapp_core.a(app_init.c.obj)
+                              CMakeFiles/CNCv1.dir/src/app/main.c.obj (app_init)
+src/app/motion/libmotion.a(motion_units.c.obj)
+                              CMakeFiles/CNCv1.dir/src/app/main.c.obj (motion_init_defaults)
+src/app/motion/libmotion.a(home.c.obj)
+                              CMakeFiles/CNCv1.dir/src/app/main.c.obj (home_init)
+src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+                              src/app/libapp_core.a(app_init.c.obj) (stepgen_init_all)
+src/bsp/libbsp.a(bsp_gpio.c.obj)
+                              src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj) (bsp_gpio_en)
+src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+                              src/app/libapp_core.a(app_init.c.obj) (dbg_uart_init)
+src/config/clock/libclock.a(system_clock.c.obj)
+                              src/app/libapp_core.a(app_init.c.obj) (system_clock_init)
+src/utils/libutils.a(delay.c.obj)
+                              src/app/motion/libmotion.a(home.c.obj) (delay)
+src/drivers/estop/libestop.a(estop.c.obj)
+                              src/app/libapp_core.a(app_init.c.obj) (estop_init)
+src/drivers/limits/liblimits.a(limits.c.obj)
+                              src/app/libapp_core.a(app_init.c.obj) (limits_init_min)
+c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-exit.o)
+                              c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (exit)
+c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-impure.o)
+                              c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-exit.o) (_global_impure_ptr)
+c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-init.o)
+                              c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (__libc_init_array)
+c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-memset.o)
+                              c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o (memset)
+c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+                              c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-exit.o) (__call_exitprocs)
+c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o)
+                              c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o) (atexit)
+c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-fini.o)
+                              c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o) (__libc_fini_array)
+c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+                              c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o) (__retarget_lock_acquire_recursive)
+c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
+                              c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o) (__register_exitproc)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+ .data          0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .rodata        0x00000000       0x24 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .text          0x00000000       0x7c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .ARM.exidx     0x00000000       0x10 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .ARM.attributes
+                0x00000000       0x1c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .group         0x00000000        0xc mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .text          0x00000000        0x0 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .data          0x00000000        0x0 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .bss           0x00000000        0x0 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .text.SystemCoreClockUpdate
+                0x00000000       0xa8 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .rodata.AHBPrescTable
+                0x00000000       0x10 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .rodata.APBPrescTable
+                0x00000000        0x8 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .text          0x00000000       0x14 mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+ .data          0x00000000        0x0 mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+ .bss           0x00000000        0x0 mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+ .group         0x00000000        0xc CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .group         0x00000000        0xc CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .text          0x00000000        0x0 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .data          0x00000000        0x0 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_macro   0x00000000      0xa72 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_macro   0x00000000       0x8e CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_macro   0x00000000       0x51 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_macro   0x00000000      0x103 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_macro   0x00000000       0x6a CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_macro   0x00000000      0x1df CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/libapp_core.a(app_init.c.obj)
+ .text          0x00000000        0x0 src/app/libapp_core.a(app_init.c.obj)
+ .data          0x00000000        0x0 src/app/libapp_core.a(app_init.c.obj)
+ .bss           0x00000000        0x0 src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000      0xa72 src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000       0x22 src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000       0x8e src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000       0x51 src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000      0x103 src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000       0x6a src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000      0x1df src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000       0x22 src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000       0x28 src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000       0x2e src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000       0x28 src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000       0x1c src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000       0x22 src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000       0xfb src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000     0x1011 src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000      0x11f src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000    0x16749 src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00000000       0x6d src/app/libapp_core.a(app_init.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(motion_units.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(motion_units.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(motion_units.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(motion_units.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(motion_units.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(motion_units.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(motion_units.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(motion_units.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(motion_units.c.obj)
+ .text          0x00000000        0x0 src/app/motion/libmotion.a(motion_units.c.obj)
+ .data          0x00000000        0x0 src/app/motion/libmotion.a(motion_units.c.obj)
+ .bss           0x00000000        0x0 src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_macro   0x00000000      0xa72 src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_macro   0x00000000       0x22 src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_macro   0x00000000       0x8e src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_macro   0x00000000       0x51 src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_macro   0x00000000      0x103 src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_macro   0x00000000       0x6a src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_macro   0x00000000      0x1df src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_macro   0x00000000       0x22 src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_macro   0x00000000       0x28 src/app/motion/libmotion.a(motion_units.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(home.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(home.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(home.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(home.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(home.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(home.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(home.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(home.c.obj)
+ .group         0x00000000        0xc src/app/motion/libmotion.a(home.c.obj)
+ .text          0x00000000        0x0 src/app/motion/libmotion.a(home.c.obj)
+ .data          0x00000000        0x0 src/app/motion/libmotion.a(home.c.obj)
+ .bss           0x00000000        0x0 src/app/motion/libmotion.a(home.c.obj)
+ .debug_macro   0x00000000      0xa72 src/app/motion/libmotion.a(home.c.obj)
+ .debug_macro   0x00000000       0x22 src/app/motion/libmotion.a(home.c.obj)
+ .debug_macro   0x00000000       0x22 src/app/motion/libmotion.a(home.c.obj)
+ .debug_macro   0x00000000       0x8e src/app/motion/libmotion.a(home.c.obj)
+ .debug_macro   0x00000000       0x51 src/app/motion/libmotion.a(home.c.obj)
+ .debug_macro   0x00000000      0x103 src/app/motion/libmotion.a(home.c.obj)
+ .debug_macro   0x00000000       0x6a src/app/motion/libmotion.a(home.c.obj)
+ .debug_macro   0x00000000      0x1df src/app/motion/libmotion.a(home.c.obj)
+ .debug_macro   0x00000000       0x28 src/app/motion/libmotion.a(home.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .text          0x00000000        0x0 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .data          0x00000000        0x0 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .bss           0x00000000        0x0 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .text.stepgen_start_all
+                0x00000000       0x1c src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000      0xa72 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000       0x22 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000       0x22 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000       0x8e src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000       0x51 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000      0x103 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000       0x6a src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000      0x1df src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000       0x28 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000       0x2e src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000       0x28 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000       0x1c src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000       0x22 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000       0xfb src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000     0x1011 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000      0x11f src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000    0x16749 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00000000       0x6d src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .text          0x00000000        0x0 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .data          0x00000000        0x0 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .bss           0x00000000        0x0 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000      0xa72 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000       0x22 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000       0x8e src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000       0x51 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000      0x103 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000       0x6a src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000      0x1df src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000       0x2e src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000       0x28 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000       0x1c src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000       0x22 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000       0xfb src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000     0x1011 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000      0x11f src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000    0x16749 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x00000000       0x6d src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .text          0x00000000        0x0 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .data          0x00000000        0x0 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .bss           0x00000000        0x0 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .text.dbg_putc
+                0x00000000       0x20 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .text.dbg_write
+                0x00000000       0x16 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .text.dbg_getc_nonblock
+                0x00000000       0x28 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000      0xa72 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000       0x22 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000       0x8e src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000       0x51 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000      0x103 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000       0x6a src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000      0x1df src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000       0x2e src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000       0x28 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000       0x1c src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000       0x22 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000       0xfb src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000     0x1011 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000      0x11f src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000    0x16749 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000       0x6d src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x00000000       0xe2 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/config/clock/libclock.a(system_clock.c.obj)
+ .text          0x00000000        0x0 src/config/clock/libclock.a(system_clock.c.obj)
+ .data          0x00000000        0x0 src/config/clock/libclock.a(system_clock.c.obj)
+ .bss           0x00000000        0x0 src/config/clock/libclock.a(system_clock.c.obj)
+ .text.dwt_cycles
+                0x00000000       0x14 src/config/clock/libclock.a(system_clock.c.obj)
+ .text.tim2_setup_10ms
+                0x00000000       0x3c src/config/clock/libclock.a(system_clock.c.obj)
+ .text.tim2_start_and_wait
+                0x00000000       0x2a src/config/clock/libclock.a(system_clock.c.obj)
+ .text.dwt_enable
+                0x00000000       0x30 src/config/clock/libclock.a(system_clock.c.obj)
+ .text.measure_10ms_cycles
+                0x00000000       0x22 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000      0xa72 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000       0x22 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000       0x8e src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000       0x51 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000      0x103 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000       0x6a src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000      0x1df src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000       0x2e src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000       0x28 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000       0x1c src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000       0x22 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000       0xfb src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000     0x1011 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000      0x11f src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000    0x16749 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x00000000       0x6d src/config/clock/libclock.a(system_clock.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/utils/libutils.a(delay.c.obj)
+ .text          0x00000000        0x0 src/utils/libutils.a(delay.c.obj)
+ .data          0x00000000        0x0 src/utils/libutils.a(delay.c.obj)
+ .bss           0x00000000        0x0 src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000      0xa72 src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000       0x22 src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000       0x8e src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000       0x51 src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000      0x103 src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000       0x6a src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000      0x1df src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000       0x2e src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000       0x28 src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000       0x1c src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000       0x22 src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000       0xfb src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000     0x1011 src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000      0x11f src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000    0x16749 src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00000000       0x6d src/utils/libutils.a(delay.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/estop/libestop.a(estop.c.obj)
+ .text          0x00000000        0x0 src/drivers/estop/libestop.a(estop.c.obj)
+ .data          0x00000000        0x0 src/drivers/estop/libestop.a(estop.c.obj)
+ .bss           0x00000000        0x0 src/drivers/estop/libestop.a(estop.c.obj)
+ .text.estop_clear
+                0x00000000       0x18 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000      0xa72 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000       0x22 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000       0x22 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000       0x8e src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000       0x51 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000      0x103 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000       0x6a src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000      0x1df src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000       0x2e src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000       0x28 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000       0x1c src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000       0x22 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000       0xfb src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000     0x1011 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000      0x11f src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000    0x16749 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000       0x6d src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00000000       0xe2 src/drivers/estop/libestop.a(estop.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .group         0x00000000        0xc src/drivers/limits/liblimits.a(limits.c.obj)
+ .text          0x00000000        0x0 src/drivers/limits/liblimits.a(limits.c.obj)
+ .data          0x00000000        0x0 src/drivers/limits/liblimits.a(limits.c.obj)
+ .bss           0x00000000        0x0 src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000      0xa72 src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000       0x22 src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000       0x22 src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000       0x8e src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000       0x51 src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000      0x103 src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000       0x6a src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000      0x1df src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000       0x28 src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000       0x2e src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000       0x28 src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000       0x1c src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000       0x22 src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000       0xfb src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000     0x1011 src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000      0x11f src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000    0x16749 src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000       0x6d src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_macro   0x00000000       0xe2 src/drivers/limits/liblimits.a(limits.c.obj)
+ .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-exit.o)
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x20 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-exit.o)
+ .debug_frame   0x00000000       0x28 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-exit.o)
+ .ARM.attributes
+                0x00000000       0x34 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-exit.o)
+ .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-memset.o)
+ .text.memset   0x00000000       0xa4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-memset.o)
+ .debug_frame   0x00000000       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000000       0x34 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x00000000       0xcc c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+ .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o)
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o)
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o)
+ .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-fini.o)
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-fini.o)
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-fini.o)
+ .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_init
+                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_init_recursive
+                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_close
+                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_close_recursive
+                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_acquire
+                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire
+                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire_recursive
+                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .text.__retarget_lock_release
+                0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .bss.__lock___arc4random_mutex
+                0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .bss.__lock___at_quick_exit_mutex
+                0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .bss.__lock___dd_hash_mutex
+                0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .bss.__lock___env_recursive_mutex
+                0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .bss.__lock___malloc_recursive_mutex
+                0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .bss.__lock___sfp_recursive_mutex
+                0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .bss.__lock___sinit_recursive_mutex
+                0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .bss.__lock___tz_mutex
+                0x00000000        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
+ .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtend.o
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtend.o
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtend.o
+ .rodata        0x00000000       0x24 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtend.o
+ .eh_frame      0x00000000        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtend.o
+ .ARM.attributes
+                0x00000000       0x34 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtend.o
+ .text          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .data          0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .bss           0x00000000        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x20000000         0x00020000         xrw
+FLASH            0x08000000         0x00080000         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
+LOAD mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+LOAD mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+LOAD CMakeFiles/CNCv1.dir/src/app/main.c.obj
+LOAD src/app/libapp_core.a
+LOAD src/app/motion/libmotion.a
+LOAD src/drivers/stepgen/libstepgen.a
+LOAD src/bsp/libbsp.a
+LOAD src/config/clock/libclock.a
+LOAD src/utils/libutils.a
+LOAD src/drivers/estop/libestop.a
+LOAD src/drivers/limits/liblimits.a
+LOAD src/bsp/libbsp.a
+START GROUP
+LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a
+LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a
+LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a
+END GROUP
+LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtend.o
+LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x20020000                _estack = (ORIGIN (RAM) + LENGTH (RAM))
+                0x00000200                _Min_Heap_Size = 0x200
+                0x00000400                _Min_Stack_Size = 0x400
+
+.isr_vector     0x08000000      0x1c4
+                0x08000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x08000000      0x1c4 mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+                0x08000000                g_pfnVectors
+                0x080001c4                . = ALIGN (0x4)
+
+.text           0x080001c4     0x1054
+                0x080001c4                . = ALIGN (0x4)
+ *(.text)
+ .text          0x080001c4       0x40 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ *(.text*)
+ .text.SystemInit
+                0x08000204       0x20 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+                0x08000204                SystemInit
+ .text.Reset_Handler
+                0x08000224       0x50 mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+                0x08000224                Reset_Handler
+ .text.Default_Handler
+                0x08000274        0x2 mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+                0x08000274                RTC_Alarm_IRQHandler
+                0x08000274                EXTI2_IRQHandler
+                0x08000274                TIM8_CC_IRQHandler
+                0x08000274                DebugMon_Handler
+                0x08000274                FMPI2C1_EV_IRQHandler
+                0x08000274                SPI4_IRQHandler
+                0x08000274                TIM1_CC_IRQHandler
+                0x08000274                DMA2_Stream5_IRQHandler
+                0x08000274                HardFault_Handler
+                0x08000274                DMA1_Stream5_IRQHandler
+                0x08000274                PVD_IRQHandler
+                0x08000274                SDIO_IRQHandler
+                0x08000274                TAMP_STAMP_IRQHandler
+                0x08000274                PendSV_Handler
+                0x08000274                NMI_Handler
+                0x08000274                CAN2_RX1_IRQHandler
+                0x08000274                EXTI3_IRQHandler
+                0x08000274                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08000274                TIM1_UP_TIM10_IRQHandler
+                0x08000274                TIM8_UP_TIM13_IRQHandler
+                0x08000274                I2C3_ER_IRQHandler
+                0x08000274                EXTI0_IRQHandler
+                0x08000274                I2C2_EV_IRQHandler
+                0x08000274                DMA1_Stream2_IRQHandler
+                0x08000274                CAN1_RX0_IRQHandler
+                0x08000274                FPU_IRQHandler
+                0x08000274                OTG_HS_WKUP_IRQHandler
+                0x08000274                UsageFault_Handler
+                0x08000274                CAN2_SCE_IRQHandler
+                0x08000274                DMA2_Stream2_IRQHandler
+                0x08000274                SPI1_IRQHandler
+                0x08000274                TIM6_DAC_IRQHandler
+                0x08000274                TIM1_BRK_TIM9_IRQHandler
+                0x08000274                DCMI_IRQHandler
+                0x08000274                CAN2_RX0_IRQHandler
+                0x08000274                DMA2_Stream3_IRQHandler
+                0x08000274                SAI2_IRQHandler
+                0x08000274                USART6_IRQHandler
+                0x08000274                USART3_IRQHandler
+                0x08000274                CAN1_RX1_IRQHandler
+                0x08000274                UART5_IRQHandler
+                0x08000274                DMA2_Stream0_IRQHandler
+                0x08000274                TIM4_IRQHandler
+                0x08000274                QUADSPI_IRQHandler
+                0x08000274                I2C1_EV_IRQHandler
+                0x08000274                DMA1_Stream6_IRQHandler
+                0x08000274                DMA1_Stream1_IRQHandler
+                0x08000274                UART4_IRQHandler
+                0x08000274                RCC_IRQHandler
+                0x08000274                TIM8_BRK_TIM12_IRQHandler
+                0x08000274                Default_Handler
+                0x08000274                CEC_IRQHandler
+                0x08000274                EXTI15_10_IRQHandler
+                0x08000274                ADC_IRQHandler
+                0x08000274                DMA1_Stream7_IRQHandler
+                0x08000274                TIM7_IRQHandler
+                0x08000274                CAN2_TX_IRQHandler
+                0x08000274                TIM5_IRQHandler
+                0x08000274                DMA2_Stream7_IRQHandler
+                0x08000274                I2C3_EV_IRQHandler
+                0x08000274                EXTI9_5_IRQHandler
+                0x08000274                RTC_WKUP_IRQHandler
+                0x08000274                SPDIF_RX_IRQHandler
+                0x08000274                SPI2_IRQHandler
+                0x08000274                OTG_HS_EP1_IN_IRQHandler
+                0x08000274                MemManage_Handler
+                0x08000274                DMA1_Stream0_IRQHandler
+                0x08000274                CAN1_TX_IRQHandler
+                0x08000274                SVC_Handler
+                0x08000274                FMPI2C1_ER_IRQHandler
+                0x08000274                EXTI4_IRQHandler
+                0x08000274                OTG_HS_EP1_OUT_IRQHandler
+                0x08000274                WWDG_IRQHandler
+                0x08000274                TIM2_IRQHandler
+                0x08000274                OTG_FS_WKUP_IRQHandler
+                0x08000274                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08000274                OTG_HS_IRQHandler
+                0x08000274                EXTI1_IRQHandler
+                0x08000274                USART2_IRQHandler
+                0x08000274                I2C2_ER_IRQHandler
+                0x08000274                DMA2_Stream1_IRQHandler
+                0x08000274                CAN1_SCE_IRQHandler
+                0x08000274                FLASH_IRQHandler
+                0x08000274                DMA2_Stream4_IRQHandler
+                0x08000274                BusFault_Handler
+                0x08000274                USART1_IRQHandler
+                0x08000274                OTG_FS_IRQHandler
+                0x08000274                SPI3_IRQHandler
+                0x08000274                DMA1_Stream4_IRQHandler
+                0x08000274                I2C1_ER_IRQHandler
+                0x08000274                FMC_IRQHandler
+                0x08000274                DMA2_Stream6_IRQHandler
+                0x08000274                SAI1_IRQHandler
+                0x08000274                DMA1_Stream3_IRQHandler
+ .text.home_one
+                0x08000276       0x44 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ *fill*         0x080002ba        0x2 
+ .text.test_moves_after_home
+                0x080002bc       0xa0 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .text.main     0x0800035c       0xa4 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+                0x0800035c                main
+ .text.__NVIC_SetPriority
+                0x08000400       0x34 src/app/libapp_core.a(app_init.c.obj)
+ .text.SysTick_Config
+                0x08000434       0x2a src/app/libapp_core.a(app_init.c.obj)
+ .text.debounce_tick_1k
+                0x0800045e        0xe src/app/libapp_core.a(app_init.c.obj)
+ .text.SysTick_Handler
+                0x0800046c        0xa src/app/libapp_core.a(app_init.c.obj)
+                0x0800046c                SysTick_Handler
+ *fill*         0x08000476        0x2 
+ .text.app_init
+                0x08000478       0x40 src/app/libapp_core.a(app_init.c.obj)
+                0x08000478                app_init
+ .text.motion_init_defaults
+                0x080004b8       0x34 src/app/motion/libmotion.a(motion_units.c.obj)
+                0x080004b8                motion_init_defaults
+ .text.steps_per_mm
+                0x080004ec       0x38 src/app/motion/libmotion.a(motion_units.c.obj)
+                0x080004ec                steps_per_mm
+ .text.mm_to_steps
+                0x08000524       0x2c src/app/motion/libmotion.a(motion_units.c.obj)
+                0x08000524                mm_to_steps
+ .text.feed_to_hz
+                0x08000550       0x34 src/app/motion/libmotion.a(motion_units.c.obj)
+                0x08000550                feed_to_hz
+ .text.axis_cw_is_negative
+                0x08000584       0x16 src/app/motion/libmotion.a(home.c.obj)
+ .text.poll_1ms
+                0x0800059a       0x10 src/app/motion/libmotion.a(home.c.obj)
+ .text.set_dir_toward
+                0x080005aa       0x22 src/app/motion/libmotion.a(home.c.obj)
+ .text.move_mm_blocking
+                0x080005cc       0x4e src/app/motion/libmotion.a(home.c.obj)
+ .text.home_init
+                0x0800061a       0x18 src/app/motion/libmotion.a(home.c.obj)
+                0x0800061a                home_init
+ .text.home_axis_blocking
+                0x08000632      0x104 src/app/motion/libmotion.a(home.c.obj)
+                0x08000632                home_axis_blocking
+ .text.axis_cw_is_negative
+                0x08000736       0x16 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .text.axis_dir_high_is_cw
+                0x0800074c        0xe src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ *fill*         0x0800075a        0x2 
+ .text.__NVIC_EnableIRQ
+                0x0800075c       0x24 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .text.ainfo    0x08000780       0x1c src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .text.ch_enable
+                0x0800079c       0x3c src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .text.axis_bit
+                0x080007d8       0x14 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .text.any_moving
+                0x080007ec       0x1c src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .text.init_axis_gpio_and_channel
+                0x08000808       0xac src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .text.stepgen_init_all
+                0x080008b4       0x60 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+                0x080008b4                stepgen_init_all
+ .text.stepgen_stop_all
+                0x08000914       0x1c src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+                0x08000914                stepgen_stop_all
+ .text.stepgen_enable
+                0x08000930       0x28 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+                0x08000930                stepgen_enable
+ .text.stepgen_dir
+                0x08000958       0x3c src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+                0x08000958                stepgen_dir
+ .text.stepgen_set_hz
+                0x08000994       0x44 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+                0x08000994                stepgen_set_hz
+ .text.stepgen_busy
+                0x080009d8       0x1c src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+                0x080009d8                stepgen_busy
+ .text.stepgen_move_n
+                0x080009f4       0x8c src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+                0x080009f4                stepgen_move_n
+ .text.TIM3_IRQHandler
+                0x08000a80      0x124 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+                0x08000a80                TIM3_IRQHandler
+ .text.bsp_gpio_en
+                0x08000ba4       0xc0 src/bsp/libbsp.a(bsp_gpio.c.obj)
+                0x08000ba4                bsp_gpio_en
+ .text.bsp_gpio_in_pu
+                0x08000c64       0x2e src/bsp/libbsp.a(bsp_gpio.c.obj)
+                0x08000c64                bsp_gpio_in_pu
+ .text.bsp_gpio_in_pd
+                0x08000c92       0x2e src/bsp/libbsp.a(bsp_gpio.c.obj)
+                0x08000c92                bsp_gpio_in_pd
+ .text.bsp_gpio_out_pp_hs
+                0x08000cc0       0x42 src/bsp/libbsp.a(bsp_gpio.c.obj)
+                0x08000cc0                bsp_gpio_out_pp_hs
+ .text.bsp_gpio_af_pp_hs
+                0x08000d02       0x76 src/bsp/libbsp.a(bsp_gpio.c.obj)
+                0x08000d02                bsp_gpio_af_pp_hs
+ .text.dbg_uart_init
+                0x08000d78       0x74 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+                0x08000d78                dbg_uart_init
+ .text.system_clock_init
+                0x08000dec       0xc8 src/config/clock/libclock.a(system_clock.c.obj)
+                0x08000dec                system_clock_init
+ .text.delay    0x08000eb4       0x20 src/utils/libutils.a(delay.c.obj)
+                0x08000eb4                delay
+ .text.deb_tick
+                0x08000ed4       0x42 src/drivers/estop/libestop.a(estop.c.obj)
+ .text.read_active
+                0x08000f16       0x1e src/drivers/estop/libestop.a(estop.c.obj)
+ .text.estop_init
+                0x08000f34       0x3c src/drivers/estop/libestop.a(estop.c.obj)
+                0x08000f34                estop_init
+ .text.estop_poll_tick
+                0x08000f70       0x2c src/drivers/estop/libestop.a(estop.c.obj)
+                0x08000f70                estop_poll_tick
+ .text.estop_latched
+                0x08000f9c       0x1c src/drivers/estop/libestop.a(estop.c.obj)
+                0x08000f9c                estop_latched
+ .text.deb_tick
+                0x08000fb8       0x42 src/drivers/limits/liblimits.a(limits.c.obj)
+ .text.read_active
+                0x08000ffa       0x24 src/drivers/limits/liblimits.a(limits.c.obj)
+ *fill*         0x0800101e        0x2 
+ .text.limits_init_min
+                0x08001020       0x50 src/drivers/limits/liblimits.a(limits.c.obj)
+                0x08001020                limits_init_min
+ .text.limits_poll_tick
+                0x08001070       0x3c src/drivers/limits/liblimits.a(limits.c.obj)
+                0x08001070                limits_poll_tick
+ .text.limits_min_pressed
+                0x080010ac       0x20 src/drivers/limits/liblimits.a(limits.c.obj)
+                0x080010ac                limits_min_pressed
+ .text.limits_block_neg
+                0x080010cc        0xa src/drivers/limits/liblimits.a(limits.c.obj)
+                0x080010cc                limits_block_neg
+ *fill*         0x080010d6        0x2 
+ .text.__libc_init_array
+                0x080010d8       0x48 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-init.o)
+                0x080010d8                __libc_init_array
+ .text.startup.register_fini
+                0x08001120       0x14 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+ .text.atexit   0x08001134        0xc c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o)
+                0x08001134                atexit
+ .text.__libc_fini_array
+                0x08001140       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-fini.o)
+                0x08001140                __libc_fini_array
+ .text.__retarget_lock_acquire_recursive
+                0x0800116c        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+                0x0800116c                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x08001170        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+                0x08001170                __retarget_lock_release_recursive
+ .text.__register_exitproc
+                0x08001174       0x8c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
+                0x08001174                __register_exitproc
+ *(.glue_7)
+ .glue_7        0x08001200        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x08001200        0x0 linker stubs
+ *(.eh_frame)
+ .eh_frame      0x08001200        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ *(.init)
+ .init          0x08001200        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08001200                _init
+ .init          0x08001204        0x8 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+ *(.fini)
+ .fini          0x0800120c        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x0800120c                _fini
+ .fini          0x08001210        0x8 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08001218                . = ALIGN (0x4)
+                0x08001218                _etext = .
+
+.vfp11_veneer   0x08001218        0x0
+ .vfp11_veneer  0x08001218        0x0 linker stubs
+
+.v4_bx          0x08001218        0x0
+ .v4_bx         0x08001218        0x0 linker stubs
+
+.iplt           0x08001218        0x0
+ .iplt          0x08001218        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+
+.rodata         0x08001218       0x84
+                0x08001218                . = ALIGN (0x4)
+ *(.rodata)
+ .rodata        0x08001218       0x10 src/app/motion/libmotion.a(motion_units.c.obj)
+ *(.rodata*)
+ .rodata.AXIS_HW
+                0x08001228       0x48 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .rodata.CCRn   0x08001270       0x10 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .rodata.LIM_MIN
+                0x08001280       0x18 src/drivers/limits/liblimits.a(limits.c.obj)
+ .rodata._global_impure_ptr
+                0x08001298        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-impure.o)
+                0x08001298                _global_impure_ptr
+                0x0800129c                . = ALIGN (0x4)
+
+.rel.dyn        0x0800129c        0x0
+ .rel.iplt      0x0800129c        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+
+.ARM.extab      0x0800129c        0x0
+                0x0800129c                . = ALIGN (0x4)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0800129c                . = ALIGN (0x4)
+
+.ARM            0x0800129c        0x0
+                0x0800129c                . = ALIGN (0x4)
+                0x0800129c                __exidx_start = .
+ *(.ARM.exidx*)
+                0x0800129c                __exidx_end = .
+                0x0800129c                . = ALIGN (0x4)
+
+.preinit_array  0x0800129c        0x0
+                0x0800129c                . = ALIGN (0x4)
+                0x0800129c                PROVIDE (__preinit_array_start = .)
+ *(.preinit_array*)
+                0x0800129c                PROVIDE (__preinit_array_end = .)
+                0x0800129c                . = ALIGN (0x4)
+
+.init_array     0x0800129c        0x8
+                0x0800129c                . = ALIGN (0x4)
+                0x0800129c                PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ .init_array.00000
+                0x0800129c        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+ *(.init_array*)
+ .init_array    0x080012a0        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080012a4                PROVIDE (__init_array_end = .)
+                0x080012a4                . = ALIGN (0x4)
+
+.fini_array     0x080012a4        0x4
+                0x080012a4                . = ALIGN (0x4)
+                0x080012a4                PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array*)
+ .fini_array    0x080012a4        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x080012a8                PROVIDE (__fini_array_end = .)
+                0x080012a8                . = ALIGN (0x4)
+                0x080012a8                _sidata = LOADADDR (.data)
+
+.data           0x20000000      0x434 load address 0x080012a8
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                _sdata = .
+ *(.data)
+ *(.data*)
+ .data.SystemCoreClock
+                0x20000000        0x4 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+                0x20000000                SystemCoreClock
+ .data.dir_is_cw
+                0x20000004        0x3 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ *fill*         0x20000007        0x1 
+ .data.impure_data
+                0x20000008      0x428 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-impure.o)
+ .data.__atexit_recursive_mutex
+                0x20000430        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+                0x20000430                __atexit_recursive_mutex
+ *(.RamFunc)
+ *(.RamFunc*)
+                0x20000434                . = ALIGN (0x4)
+
+.igot.plt       0x20000434        0x0 load address 0x080016dc
+ .igot.plt      0x20000434        0x0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+
+.tdata          0x20000434        0x0 load address 0x080016dc
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+                0x20000434                . = ALIGN (0x4)
+                0x20000434                _edata = .
+                [!provide]                PROVIDE (__data_end = .)
+                [!provide]                PROVIDE (__tdata_end = .)
+                [!provide]                PROVIDE (__tdata_start = ADDR (.tdata))
+                [!provide]                PROVIDE (__tdata_size = (__tdata_end - __tdata_start))
+                [!provide]                PROVIDE (__data_start = ADDR (.data))
+                [!provide]                PROVIDE (__data_size = (__data_end - __data_start))
+                [!provide]                PROVIDE (__tdata_source = LOADADDR (.tdata))
+                [!provide]                PROVIDE (__tdata_source_end = (LOADADDR (.tdata) + SIZEOF (.tdata)))
+                [!provide]                PROVIDE (__tdata_source_size = (__tdata_source_end - __tdata_source))
+                [!provide]                PROVIDE (__data_source = LOADADDR (.data))
+                [!provide]                PROVIDE (__data_source_end = __tdata_source_end)
+                [!provide]                PROVIDE (__data_source_size = (__data_source_end - __data_source))
+
+.tbss           0x20000434        0x0 load address 0x080016dc
+                0x20000434                _sbss = .
+                0x20000434                __bss_start__ = _sbss
+ *(.tbss .tbss.*)
+                0x20000434                . = ALIGN (0x4)
+                [!provide]                PROVIDE (__tbss_end = .)
+                [!provide]                PROVIDE (__tbss_start = ADDR (.tbss))
+                [!provide]                PROVIDE (__tbss_size = (__tbss_end - __tbss_start))
+                [!provide]                PROVIDE (__tbss_offset = (ADDR (.tbss) - ADDR (.tdata)))
+                [!provide]                PROVIDE (__tls_base = __tdata_start)
+                [!provide]                PROVIDE (__tls_end = __tbss_end)
+                [!provide]                PROVIDE (__tls_size = (__tls_end - __tls_base))
+                [!provide]                PROVIDE (__tls_align = MAX (ALIGNOF (.tdata), ALIGNOF (.tbss)))
+                [!provide]                PROVIDE (__tls_size_align = (((__tls_size + __tls_align) - 0x1) & ~ ((__tls_align - 0x1))))
+                [!provide]                PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
+                [!provide]                PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
+
+.bss            0x20000434       0x58 load address 0x080016dc
+ *(.bss)
+ .bss           0x20000434       0x1c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ *(.bss*)
+ .bss.cfg       0x20000450       0x18 src/app/motion/libmotion.a(motion_units.c.obj)
+ .bss.moving_mask
+                0x20000468        0x1 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ *fill*         0x20000469        0x3 
+ .bss.steps_remaining
+                0x2000046c        0xc src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .bss.s_estop_db
+                0x20000478        0x3 src/drivers/estop/libestop.a(estop.c.obj)
+ .bss.s_latched
+                0x2000047b        0x1 src/drivers/estop/libestop.a(estop.c.obj)
+ .bss.s_min_db  0x2000047c        0x9 src/drivers/limits/liblimits.a(limits.c.obj)
+ *fill*         0x20000485        0x3 
+ .bss.__lock___atexit_recursive_mutex
+                0x20000488        0x1 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+                0x20000488                __lock___atexit_recursive_mutex
+ *(COMMON)
+                0x2000048c                . = ALIGN (0x4)
+ *fill*         0x20000489        0x3 
+                0x2000048c                _ebss = .
+                0x2000048c                __bss_end__ = _ebss
+                [!provide]                PROVIDE (__bss_end = .)
+                [!provide]                PROVIDE (__non_tls_bss_start = ADDR (.bss))
+                [!provide]                PROVIDE (__bss_start = __tbss_start)
+                [!provide]                PROVIDE (__bss_size = (__bss_end - __bss_start))
+
+._user_heap_stack
+                0x2000048c      0x604 load address 0x080016dc
+                0x20000490                . = ALIGN (0x8)
+ *fill*         0x2000048c        0x4 
+                [!provide]                PROVIDE (end = .)
+                [!provide]                PROVIDE (_end = .)
+                0x20000690                . = (. + _Min_Heap_Size)
+ *fill*         0x20000490      0x200 
+                0x20000a90                . = (. + _Min_Stack_Size)
+ *fill*         0x20000690      0x400 
+                0x20000a90                . = ALIGN (0x8)
+
+/DISCARD/
+ libc.a:*(*)
+ libm.a:*(*)
+ libgcc.a:*(*)
+OUTPUT(CNCv1 elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x00000000       0x30
+ .ARM.attributes
+                0x00000000       0x1e c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+ .ARM.attributes
+                0x0000001e       0x34 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .ARM.attributes
+                0x00000052       0x34 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .ARM.attributes
+                0x00000086       0x21 mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+ .ARM.attributes
+                0x000000a7       0x34 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .ARM.attributes
+                0x000000db       0x34 src/app/libapp_core.a(app_init.c.obj)
+ .ARM.attributes
+                0x0000010f       0x34 src/app/motion/libmotion.a(motion_units.c.obj)
+ .ARM.attributes
+                0x00000143       0x34 src/app/motion/libmotion.a(home.c.obj)
+ .ARM.attributes
+                0x00000177       0x34 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .ARM.attributes
+                0x000001ab       0x34 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .ARM.attributes
+                0x000001df       0x34 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .ARM.attributes
+                0x00000213       0x34 src/config/clock/libclock.a(system_clock.c.obj)
+ .ARM.attributes
+                0x00000247       0x34 src/utils/libutils.a(delay.c.obj)
+ .ARM.attributes
+                0x0000027b       0x34 src/drivers/estop/libestop.a(estop.c.obj)
+ .ARM.attributes
+                0x000002af       0x34 src/drivers/limits/liblimits.a(limits.c.obj)
+ .ARM.attributes
+                0x000002e3       0x34 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000317       0x34 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000034b       0x34 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x0000037f       0x34 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x000003b3       0x34 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-fini.o)
+ .ARM.attributes
+                0x000003e7       0x34 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .ARM.attributes
+                0x0000041b       0x34 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x0000044f       0x1e c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+
+.comment        0x00000000       0x49
+ .comment       0x00000000       0x49 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+                                 0x4a (size before relaxing)
+ .comment       0x00000049       0x4a CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .comment       0x00000049       0x4a src/app/libapp_core.a(app_init.c.obj)
+ .comment       0x00000049       0x4a src/app/motion/libmotion.a(motion_units.c.obj)
+ .comment       0x00000049       0x4a src/app/motion/libmotion.a(home.c.obj)
+ .comment       0x00000049       0x4a src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .comment       0x00000049       0x4a src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .comment       0x00000049       0x4a src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .comment       0x00000049       0x4a src/config/clock/libclock.a(system_clock.c.obj)
+ .comment       0x00000049       0x4a src/utils/libutils.a(delay.c.obj)
+ .comment       0x00000049       0x4a src/drivers/estop/libestop.a(estop.c.obj)
+ .comment       0x00000049       0x4a src/drivers/limits/liblimits.a(limits.c.obj)
+
+.debug_info     0x00000000     0x447f
+ .debug_info    0x00000000      0x56d mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_info    0x0000056d       0x22 mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+ .debug_info    0x0000058f      0x5b9 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_info    0x00000b48      0x80e src/app/libapp_core.a(app_init.c.obj)
+ .debug_info    0x00001356      0x22d src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_info    0x00001583      0x582 src/app/motion/libmotion.a(home.c.obj)
+ .debug_info    0x00001b05     0x108e src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_info    0x00002b93      0x4c1 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_info    0x00003054      0x47f src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_info    0x000034d3      0x717 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_info    0x00003bea       0xae src/utils/libutils.a(delay.c.obj)
+ .debug_info    0x00003c98      0x393 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_info    0x0000402b      0x454 src/drivers/limits/liblimits.a(limits.c.obj)
+
+.debug_abbrev   0x00000000     0x1242
+ .debug_abbrev  0x00000000      0x11c mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_abbrev  0x0000011c       0x12 mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+ .debug_abbrev  0x0000012e      0x18b CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_abbrev  0x000002b9      0x1e1 src/app/libapp_core.a(app_init.c.obj)
+ .debug_abbrev  0x0000049a      0x12e src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_abbrev  0x000005c8      0x181 src/app/motion/libmotion.a(home.c.obj)
+ .debug_abbrev  0x00000749      0x2fe src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_abbrev  0x00000a47      0x132 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_abbrev  0x00000b79      0x14f src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_abbrev  0x00000cc8      0x138 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_abbrev  0x00000e00       0x6e src/utils/libutils.a(delay.c.obj)
+ .debug_abbrev  0x00000e6e      0x1e8 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_abbrev  0x00001056      0x1ec src/drivers/limits/liblimits.a(limits.c.obj)
+
+.debug_loc      0x00000000      0xf55
+ .debug_loc     0x00000000       0xbe mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_loc     0x000000be      0x120 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_loc     0x000001de       0x9b src/app/libapp_core.a(app_init.c.obj)
+ .debug_loc     0x00000279      0x113 src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_loc     0x0000038c      0x2a6 src/app/motion/libmotion.a(home.c.obj)
+ .debug_loc     0x00000632      0x594 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_loc     0x00000bc6      0x129 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_loc     0x00000cef       0x71 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_loc     0x00000d60       0x37 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_loc     0x00000d97       0xc0 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_loc     0x00000e57       0xfe src/drivers/limits/liblimits.a(limits.c.obj)
+
+.debug_aranges  0x00000000      0x350
+ .debug_aranges
+                0x00000000       0x28 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_aranges
+                0x00000028       0x28 mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+ .debug_aranges
+                0x00000050       0x30 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_aranges
+                0x00000080       0x40 src/app/libapp_core.a(app_init.c.obj)
+ .debug_aranges
+                0x000000c0       0x38 src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_aranges
+                0x000000f8       0x48 src/app/motion/libmotion.a(home.c.obj)
+ .debug_aranges
+                0x00000140       0xa0 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_aranges
+                0x000001e0       0x40 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_aranges
+                0x00000220       0x38 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_aranges
+                0x00000258       0x48 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_aranges
+                0x000002a0       0x20 src/utils/libutils.a(delay.c.obj)
+ .debug_aranges
+                0x000002c0       0x48 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_aranges
+                0x00000308       0x48 src/drivers/limits/liblimits.a(limits.c.obj)
+
+.debug_ranges   0x00000000      0x2b8
+ .debug_ranges  0x00000000       0x18 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_ranges  0x00000018       0x20 mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+ .debug_ranges  0x00000038       0x20 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_ranges  0x00000058       0x30 src/app/libapp_core.a(app_init.c.obj)
+ .debug_ranges  0x00000088       0x28 src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_ranges  0x000000b0       0x38 src/app/motion/libmotion.a(home.c.obj)
+ .debug_ranges  0x000000e8       0xc0 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_ranges  0x000001a8       0x30 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_ranges  0x000001d8       0x28 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_ranges  0x00000200       0x38 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_ranges  0x00000238       0x10 src/utils/libutils.a(delay.c.obj)
+ .debug_ranges  0x00000248       0x38 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_ranges  0x00000280       0x38 src/drivers/limits/liblimits.a(limits.c.obj)
+
+.debug_macro    0x00000000    0x1957f
+ .debug_macro   0x00000000       0xda mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x000000da      0xa72 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x00000b4c       0x2e mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x00000b7a       0x28 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x00000ba2       0x22 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x00000bc4       0x8e mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x00000c52       0x51 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x00000ca3      0x103 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x00000da6       0x6a mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x00000e10      0x1df mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x00000fef       0x1c mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x0000100b       0x22 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x0000102d       0xfb mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x00001128     0x1011 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x00002139      0x11f mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x00002258    0x16749 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x000189a1       0x6d mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_macro   0x00018a0e       0x85 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_macro   0x00018a93       0x22 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_macro   0x00018ab5       0x28 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_macro   0x00018add       0xfc src/app/libapp_core.a(app_init.c.obj)
+ .debug_macro   0x00018bd9       0x7d src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_macro   0x00018c56       0x89 src/app/motion/libmotion.a(home.c.obj)
+ .debug_macro   0x00018cdf      0x108 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00018de7      0x174 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x00018f5b       0xe2 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_macro   0x0001903d       0xd2 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_macro   0x0001910f       0xdf src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_macro   0x000191ee       0xd2 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_macro   0x000192c0       0xd2 src/utils/libutils.a(delay.c.obj)
+ .debug_macro   0x00019392       0xf2 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_macro   0x00019484       0xfb src/drivers/limits/liblimits.a(limits.c.obj)
+
+.debug_line     0x00000000     0x3ba6
+ .debug_line    0x00000000      0x3cf mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_line    0x000003cf       0xb1 mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+ .debug_line    0x00000480      0x3cb CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_line    0x0000084b      0x5b5 src/app/libapp_core.a(app_init.c.obj)
+ .debug_line    0x00000e00      0x31b src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_line    0x0000111b      0x515 src/app/motion/libmotion.a(home.c.obj)
+ .debug_line    0x00001630      0x9e2 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_line    0x00002012      0x545 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_line    0x00002557      0x430 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_line    0x00002987      0x50d src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_line    0x00002e94      0x314 src/utils/libutils.a(delay.c.obj)
+ .debug_line    0x000031a8      0x4b3 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_line    0x0000365b      0x54b src/drivers/limits/liblimits.a(limits.c.obj)
+
+.debug_str      0x00000000    0x8c55d
+ .debug_str     0x00000000    0x8b00c mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+                              0x8b191 (size before relaxing)
+ .debug_str     0x0008b00c       0x5f mcu_support/CMakeFiles/stm32_startup.dir/st/Startup/startup_stm32f446xx.s.obj
+                                 0x8f (size before relaxing)
+ .debug_str     0x0008b06b      0x26b CMakeFiles/CNCv1.dir/src/app/main.c.obj
+                               0x3e4e (size before relaxing)
+ .debug_str     0x0008b2d6      0x64e src/app/libapp_core.a(app_init.c.obj)
+                              0x8b74c (size before relaxing)
+ .debug_str     0x0008b924       0x94 src/app/motion/libmotion.a(motion_units.c.obj)
+                               0x3daf (size before relaxing)
+ .debug_str     0x0008b9b8       0xa0 src/app/motion/libmotion.a(home.c.obj)
+                               0x3e5b (size before relaxing)
+ .debug_str     0x0008ba58      0x762 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+                              0x8bf15 (size before relaxing)
+ .debug_str     0x0008c1ba       0x5c src/bsp/libbsp.a(bsp_gpio.c.obj)
+                              0x8b115 (size before relaxing)
+ .debug_str     0x0008c216       0x85 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+                              0x8b360 (size before relaxing)
+ .debug_str     0x0008c29b      0x17b src/config/clock/libclock.a(system_clock.c.obj)
+                              0x8b22b (size before relaxing)
+ .debug_str     0x0008c416       0x3b src/utils/libutils.a(delay.c.obj)
+                              0x8af5f (size before relaxing)
+ .debug_str     0x0008c451       0xaa src/drivers/estop/libestop.a(estop.c.obj)
+                              0x8b304 (size before relaxing)
+ .debug_str     0x0008c4fb       0x62 src/drivers/limits/liblimits.a(limits.c.obj)
+                              0x8b3ae (size before relaxing)
+
+.debug_frame    0x00000000      0xb2c
+ .debug_frame   0x00000000       0x54 mcu_support/CMakeFiles/stm32_startup.dir/st/system_stm32f4xx.c.obj
+ .debug_frame   0x00000054       0x90 CMakeFiles/CNCv1.dir/src/app/main.c.obj
+ .debug_frame   0x000000e4       0xa8 src/app/libapp_core.a(app_init.c.obj)
+ .debug_frame   0x0000018c       0xb0 src/app/motion/libmotion.a(motion_units.c.obj)
+ .debug_frame   0x0000023c       0xe8 src/app/motion/libmotion.a(home.c.obj)
+ .debug_frame   0x00000324      0x244 src/drivers/stepgen/libstepgen.a(stepgen_pwm_tim3.c.obj)
+ .debug_frame   0x00000568       0xb8 src/bsp/libbsp.a(bsp_gpio.c.obj)
+ .debug_frame   0x00000620       0x94 src/bsp/libbsp.a(bsp_usart2_debug.c.obj)
+ .debug_frame   0x000006b4       0xd0 src/config/clock/libclock.a(system_clock.c.obj)
+ .debug_frame   0x00000784       0x38 src/utils/libutils.a(delay.c.obj)
+ .debug_frame   0x000007bc       0xd0 src/drivers/estop/libestop.a(estop.c.obj)
+ .debug_frame   0x0000088c       0xd4 src/drivers/limits/liblimits.a(limits.c.obj)
+ .debug_frame   0x00000960       0x2c c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-init.o)
+ .debug_frame   0x0000098c       0x68 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__call_atexit.o)
+ .debug_frame   0x000009f4       0x20 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-atexit.o)
+ .debug_frame   0x00000a14       0x34 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-fini.o)
+ .debug_frame   0x00000a48       0xb0 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-lock.o)
+ .debug_frame   0x00000af8       0x34 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg.a(lib_a-__atexit.o)
